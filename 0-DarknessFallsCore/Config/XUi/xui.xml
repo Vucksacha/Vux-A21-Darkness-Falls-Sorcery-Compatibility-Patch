@@ -1,0 +1,201 @@
+<config>
+	<set xpath="/xui/ruleset/@scale">1.1</set>
+	<remove xpath="/xui/ruleset/window_group[@name='compass']/window[@name='windowEntering']"></remove>
+	<set xpath="/xui/ruleset/window_group[@name='workstation_forge']">
+		<window name="windowCraftingList"/>
+		<window name="craftingInfoPanel"/>
+		<window name="windowCraftingQueue"/>
+		<window name="windowToolsForge" />
+		<window name="windowFuel" />
+		<window name="windowOutput" />
+		<window name="windowNonPagingHeader" />	
+	</set>
+	<set xpath="/xui/ruleset/window_group[@name='workstation_workbench']">
+		<window name="windowCraftingList" />
+		<window name="craftingInfoPanel" />
+		<window name="windowCraftingQueue" />
+		<window name="windowToolsWorkbench" />
+		<window name="windowOutput" />
+		<window name="windowNonPagingHeader" /> 
+		<window name="windowCombine" />
+	</set>
+	<append xpath="/xui/ruleset/window_group[@name='toolbelt']">
+		<window name="HUDBuffPopout" anchor="LeftBottom" />
+		<window name="HUDLeftStatBars" anchor="CenterBottom" />
+	</append>
+	<set xpath="/xui/ruleset/window_group[@name='trader']">
+		<window name="windowTrader" />
+		<window name="windowTraderTime" />
+		<window name="windowNonPagingHeader" />
+		<window name="serviceInfoPanel" />	
+	</set>
+	<set xpath="/xui/ruleset/window_group[@name='ingameMenu']">
+		<window name="DFallsingameMenu" />
+	</set>
+	<remove xpath="/xui/ruleset/window_group[@name='dialog']"></remove>
+	<append xpath="/xui/ruleset">
+		<window_group name="dialog" controller="XUiC_DialogWindowGroup" open_backpack_on_open="false" close_compass_on_open="true">
+			<window name="windowRespondentName" anchor="CenterTop" />
+			<window name="windowStatement" anchor="CenterTop" />
+			<window name="windowResponses" anchor="CenterBottom" />
+		</window_group>
+		<!-- Big Forge Mod -->
+		<window_group name="workstation_DFBigForge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsBigForge" />
+			<window name="windowFuelBigForge" /> 
+			<window name="windowBigForgeOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+			
+		<!-- Advanced Forge Mod -->
+		<window_group name="workstation_DFAdvForge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsAdvForge" /> 
+			<window name="windowAdvForgeOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+			
+		<!-- Working Oven Mod -->
+		<window_group name="workstation_DFworkingOven" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowToolsOven" />
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutputTwelve" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+			
+		<window_group name="workstation_DFworkingWallOven" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowToolsOven" />
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutputTwelve" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+			
+		<!-- Pestle and Mortar -->
+		<window_group name="workstation_DFMandP" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>		
+			
+		<!-- Metal and Tailoring Workbenches -->
+		<window_group name="workstation_DFworkstationMetal" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowToolsMetal" />
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>	
+			
+		<window_group name="workstation_DFworkstationTailor" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowToolsTailor" />
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+			
+		<window_group name="workstation_DFLathe" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowToolsCNC" />
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>		
+			
+		<!-- Oil Pump -->
+		<window_group name="workstation_DFoilPump" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowToolsOilPump" />
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+			
+		<!-- Radio Mod -->
+		<window_group name="workstation_DFradio" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowRadioTime"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+			
+		<!-- Writing Desk -->
+		<window_group name="workstation_DFwritingDesk" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>	
+			
+		<!-- Fusion Forge Mod -->
+		<window_group name="workstation_SciFiForge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/> 
+			<window name="windowToolsAdvForge" />
+			<window name="windowScifiForgeOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+			
+		<!-- Laser Workbench -->
+		<window_group name="workstation_ScifiBench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsScifiBench" />
+			<window name="windowCombineScifiBench" />
+			<window name="windowNonPagingHeader" />
+			<window name="windowOutputScifiBench" />				
+		</window_group>
+			
+		<!-- Mechanic's Workbench -->
+		<window_group name="workstation_DFVehicleWorkstation" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>		
+			
+		<window_group name="HireInformation" >
+			<window name="windowHireInformationPopup" anchor="CenterTop"/>
+		</window_group>		
+
+		<window_group name="passive_collector_beeHiveFull" left_panel_valign_top="false" controller="XUiC_PassiveCollectorWindowGroup, IDCCoreV2" close_compass_on_open="true">
+			<window name="windowBeehive"/>
+			<window name="idcWindowFuelBeehive"/>
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="passive_collector_DFchickenCoop" left_panel_valign_top="false" controller="XUiC_PassiveCollectorWindowGroup, IDCCoreV2" close_compass_on_open="true">
+			<window name="windowChickenCoop"/>
+			<window name="idcWindowFuelBeehive"/>
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="passive_collector_DFanimalSnare" left_panel_valign_top="false" controller="XUiC_PassiveCollectorWindowGroup, IDCCoreV2" close_compass_on_open="true">
+			<window name="windowAnimalSnare"/>
+			<window name="windowToolsAnimalSnare"/>
+			<window name="idcWindowSnareFuel"/>
+			<window name="windowNonPagingHeader" />
+		</window_group>
+	</append>
+</config>
