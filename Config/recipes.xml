@@ -1,0 +1,47 @@
+<Sorcery>
+		
+		<remove xpath="/recipes/recipe[@name='resourceBrokenGlass']" />
+		<append xpath="/recipes">
+		
+			<recipe name="resourceBrokenGlass" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+				<ingredient name="resourceCrushedSand" count="4"/>
+			</recipe>
+			
+			<recipe name="sorc_DFarmorTechBoots" count="1" craft_area="ScifiBench" craft_tool="DFScifiAIOT" tags="learnable">
+				<ingredient name="DFforgedTitanium" count="10" />
+				<ingredient name="resourceMilitaryFiber" count="10"/>
+				<ingredient name="DFresourceEnergyCell" count="1"/>
+				<ingredient name="resourceThreadArcane" count="140"/>
+			</recipe>
+
+			<recipe name="sorc_DFarmorTechVest" count="1" craft_area="ScifiBench" craft_tool="DFScifiAIOT" tags="learnable">
+				<ingredient name="DFforgedTitanium" count="10" />
+				<ingredient name="resourceMilitaryFiber" count="10"/>
+				<ingredient name="DFresourceEnergyCell" count="1"/>
+				<ingredient name="resourceThreadArcane" count="160"/>
+			</recipe>
+
+			<recipe name="sorc_DFarmorTechGloves" count="1" craft_area="ScifiBench" craft_tool="DFScifiAIOT" tags="learnable">
+				<ingredient name="DFforgedTitanium" count="10" />
+				<ingredient name="resourceMilitaryFiber" count="10"/>
+				<ingredient name="DFresourceEnergyCell" count="1"/>
+				<ingredient name="resourceThreadArcane" count="135"/>
+			</recipe>
+				
+			<recipe name="sorc_DFarmorTechHelmet" count="1" craft_area="ScifiBench" craft_tool="DFScifiAIOT" tags="learnable">
+				<ingredient name="DFforgedTitanium" count="10" />
+				<ingredient name="resourceMilitaryFiber" count="10"/>
+				<ingredient name="DFresourceEnergyCell" count="1"/>
+				<ingredient name="resourceThreadArcane" count="150"/>
+			</recipe>
+					
+			<recipe name="sorc_DFarmorTechLegs" count="1" craft_area="ScifiBench" craft_tool="DFScifiAIOT" tags="learnable">
+				<ingredient name="DFforgedTitanium" count="10" />
+				<ingredient name="resourceMilitaryFiber" count="10"/>
+				<ingredient name="DFresourceEnergyCell" count="1"/>
+				<ingredient name="resourceThreadArcane" count="155"/>
+			</recipe>
+			
+		</append>
+
+</Sorcery>

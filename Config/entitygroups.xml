@@ -1,0 +1,45 @@
+<Vux>	
+	<!-- HORDE SPAWNS -->
+	<append xpath="/entitygroups/entitygroup[starts-with(@name,'bloodHordeStageGS')]">
+		<entity name="sorceryFallenFire" prob="0.05"/>
+		<entity name="sorceryFallenIce" prob="0.05"/>
+		<entity name="sorceryFallenLightning" prob="0.05"/>
+		<entity name="sorceryFallenOmni" prob="0.01"/>
+	</append>
+
+	<append xpath="/entitygroups/entitygroup[starts-with(@name, 'blood3HordeStageGS')]">
+		<entity name="sorceryFallenFire" prob="0.08"/>
+		<entity name="sorceryFallenIce" prob="0.08"/>
+		<entity name="sorceryFallenLightning" prob="0.08"/>
+		<entity name="sorceryFallenOmni" prob="0.01"/>
+	</append>
+	<!-- WANDERING -->
+	<append xpath="/entitygroups/entitygroup[@name='DemonHorde' or @name='ZombieFeralRadWandering']">
+		<entity name="sorceryFallenFire" prob="0.1"/>
+		<entity name="sorceryFallenIce" prob="0.1"/>
+		<entity name="sorceryFallenLightning" prob="0.1"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='DemonPortal' or @name='ScfiPortal' or @name='ZombieDemonsBiome']">
+		<entity name="sorceryFallenFire" prob="0.08"/>
+		<entity name="sorceryFallenIce" prob="0.08"/>
+		<entity name="sorceryFallenLightning" prob="0.08"/>
+		<entity name="sorceryFallenOmni" prob="0.01"/>
+	</append>	
+	<!-- FERAL -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombieRadGroup']">
+		<entity name="sorceryFallenFire" prob="0.08"/>
+		<entity name="sorceryFallenIce" prob="0.08"/>
+		<entity name="sorceryFallenLightning" prob="0.08"/>
+	</append>
+	<!-- NIGHT -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<entity name="sorceryFallenFire" prob="0.08"/>
+		<entity name="sorceryFallenIce" prob="0.08"/>
+		<entity name="sorceryFallenLightning" prob="0.08"/>
+	</append>
+
+	<!-- Not sure if this is OK? Maybe it doesn't belong in those groups.-->
+	<append xpath="/entitygroups/entitygroup[@name='DemonHorde' or @name='DemonHordeEmpowered' or @name='ZombieFeralRadWandering' or @name='DemonPortal' or @name='ZombiesWasteland2' or @name='ZombiesWastelandNight']">
+		<entity name="sorceryFallenOmni" prob="0.01"/>
+	</append>	
+</Vux>

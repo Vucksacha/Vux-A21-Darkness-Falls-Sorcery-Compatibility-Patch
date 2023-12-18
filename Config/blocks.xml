@@ -1,0 +1,210 @@
+<Vux>
+<!-- Spellforge Workaround -->
+	<!-- NOTE: Workaround Khaines DF patch -->
+	<set xpath="/blocks/block[@name='conjureFire']/property[@class='Workstation']/property[@name='InputMaterials']/@value">fire,fire,fire</set>
+	<set xpath="/blocks/block[@name='conjureIce']/property[@class='Workstation']/property[@name='InputMaterials']/@value">ice,ice,ice</set>
+	<set xpath="/blocks/block[@name='conjureLightning']/property[@class='Workstation']/property[@name='InputMaterials']/@value">lightning,lightning,lightning</set>
+
+<!-- ESSENCE HARVESTS ____________________________________________________________________________-->
+<!-- ROCKS -->
+	<!-- T3 BOULDERS -->
+	<append xpath="/blocks/block[starts-with(@name,'DFrockResource')]">
+		<drop event="Harvest" name="resourceEssenceFire" count="90,100" tag="essenceFireHarvest"/>
+		<drop event="Harvest" name="resourceEssenceIce" count="90,100" tag="essenceIceHarvest"/>
+		<drop event="Harvest" name="resourceEssenceLightning" count="90,100" tag="essenceLightningHarvest"/>
+			<!-- perk: essenceMastery, hidden -->
+			<drop event="Harvest" name="resourceEssenceFire" count="10" prob=".5" tag="essenceHarvestHidden"/>
+			<drop event="Harvest" name="resourceEssenceIce" count="10" prob=".5" tag="essenceHarvestHidden"/>
+			<drop event="Harvest" name="resourceEssenceLightning" count="10" prob=".5" tag="essenceHarvestHidden"/>
+	</append>
+
+	<!-- set a class to target for lootlist to enable broadcast -->
+	<append xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='bindtoWorkstation']/@value">,SorcPlayerStorageBroadcast</append>
+
+	<!-- Add sorcery workstations to broadcast -->
+	<prepend xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='bindtoWorkstation']/@value">sorceryAlchemyStation,sorceryArcaneWheel,sorceryDesk,sorceryEnchantingStation,sorceryRitualStation,</prepend>
+
+	<!-- Make the writable sorcery chests upgradeable for broadcast -->
+	<append xpath="/blocks/block[@name='cntChestScroll_Arcane']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="cntChestScroll_ArcaneSecureBroadcast" />
+			<property name="Item" value="resourceBroadcastUpgrade" />
+			<property name="ItemCount" value="1" />
+			<property name="UpgradeHitCount" value="4" />
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntChestScroll_Fire']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="cntChestScroll_FireSecureBroadcast" />
+			<property name="Item" value="resourceBroadcastUpgrade" />
+			<property name="ItemCount" value="1" />
+			<property name="UpgradeHitCount" value="4" />
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntChestScroll_Ice']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="cntChestScroll_IceSecureBroadcast" />
+			<property name="Item" value="resourceBroadcastUpgrade" />
+			<property name="ItemCount" value="1" />
+			<property name="UpgradeHitCount" value="4" />
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntChestScroll_Lightning']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="cntChestScroll_LightningSecureBroadcast" />
+			<property name="Item" value="resourceBroadcastUpgrade" />
+			<property name="ItemCount" value="1" />
+			<property name="UpgradeHitCount" value="4" />
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntChestScroll_Unholy']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="cntChestScroll_UnholySecureBroadcast" />
+			<property name="Item" value="resourceBroadcastUpgrade" />
+			<property name="ItemCount" value="1" />
+			<property name="UpgradeHitCount" value="4" />
+		</property>
+	</append>
+	<append xpath="/blocks/block[@name='cntChestScroll_Holy']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="cntChestScroll_HolySecureBroadcast" />
+			<property name="Item" value="resourceBroadcastUpgrade" />
+			<property name="ItemCount" value="1" />
+			<property name="UpgradeHitCount" value="4" />
+		</property>
+	</append>
+
+<!-- Secure and Insecure versions of the sorc chests that broadcast -->
+	<append xpath="/blocks">
+		<block name="cntChestScroll_ArcaneSecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteArcane" />
+			<property class="RepairItems">
+				<property name="resourceExtractArcane" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractArcane" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Arcane"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+			<property name="DowngradeBlock" value="cntChestScroll_ArcaneInsecureBroadcast"/>
+		</block>
+		<block name="cntChestScroll_ArcaneInsecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteArcane" />
+			<property class="RepairItems">
+				<property name="resourceExtractArcane" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractArcane" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Arcane"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+		</block>
+		<block name="cntChestScroll_FireSecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteFire" />
+			<property class="RepairItems">
+				<property name="resourceExtractFire" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractFire" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Fire"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+			<property name="DowngradeBlock" value="cntChestScroll_FireInsecureBroadcast"/>
+		</block>
+
+		<block name="cntChestScroll_FireInsecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteFire" />
+			<property class="RepairItems">
+				<property name="resourceExtractFire" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractFire" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Fire"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+		</block>
+
+		<block name="cntChestScroll_IceSecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteIce" />
+			<property class="RepairItems">
+				<property name="resourceExtractFire" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractIce" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Ice"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+			<property name="DowngradeBlock" value="cntChestScroll_IceInsecureBroadcast"/>
+		</block>
+		<block name="cntChestScroll_IceInsecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteIce" />
+			<property class="RepairItems">
+				<property name="resourceExtractIce" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractIce" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Fire"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+		</block>
+		<block name="cntChestScroll_LightningSecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteLightning" />
+			<property class="RepairItems">
+				<property name="resourceExtractLightning" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractLightning" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Lightning"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+			<property name="DowngradeBlock" value="cntChestScroll_LightningInsecureBroadcast"/>
+		</block>
+		<block name="cntChestScroll_LightningInsecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteLightning" />
+			<property class="RepairItems">
+				<property name="resourceExtractLightning" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractLightning" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Lightning"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+		</block>
+		<block name="cntChestScroll_UnholySecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteUnholy" />
+			<property class="RepairItems">
+				<property name="resourceExtractUnholy" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractUnholy" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Unholy"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+			<property name="DowngradeBlock" value="cntChestScroll_UnholyInsecureBroadcast"/>
+		</block>
+		<block name="cntChestScroll_UnholyInsecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteUnholy" />
+			<property class="RepairItems">
+				<property name="resourceExtractUnholy" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractUnholy" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Unholy"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+		</block>
+		<block name="cntChestScroll_HolySecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteHoly" />
+			<property class="RepairItems">
+				<property name="resourceExtractHoly" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractHoly" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Holy"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+			<property name="DowngradeBlock" value="cntChestScroll_HolyInsecureBroadcast"/>
+		</block>
+
+		<block name="cntChestScroll_HolyInsecureBroadcast">
+			<property name="Extends" value="cntChestScroll_Master"/>
+			<property name="Model" value="#@modfolder(Sorcery):Resources/chestsWoodenRunic.unity3d?chestWriteHoly" />
+			<property class="RepairItems">
+				<property name="resourceExtractHoly" value="80"/>
+			</property>
+			<drop event="Destroy" name="resourceExtractHoly" count="8,10"/>
+			<property name="CustomIcon" value="cntChest_Holy"/>
+			<property name="LootList" value="SorcPlayerStorageBroadcast"/>
+		</block>
+	</append>
+	
+</Vux>

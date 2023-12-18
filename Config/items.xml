@@ -1,0 +1,900 @@
+<Vux>
+	<!-- STAVES -->
+	<append xpath="/items/item[starts-with(@name,'staff')]/property[@name='Tags']/@value">,unique</append>
+	<append xpath="/items/item[starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/property[@name='Tags']/@value">,unique</append>
+		
+	<!-- ALL: Spellcasts -->
+	<append xpath="/items/item[starts-with(@name,'spellcast')]/property[@name='Tags']/@value">,unique</append>
+	<set xpath="/items/item[starts-with(@name,'spellcast')]/effect_group[@name='SPELLCAST: TIERED']/passive_effect[@name='DegradationMax']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name,'spellcast')]/effect_group[@name='SPELLCAST: TIERED']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	<set xpath="/items/item[starts-with(@name,'spellcast')]/effect_group[@name='SPELLCAST: TIERED']/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	
+	<!-- ALL: Sorcerer Armor -->
+	<append xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/property[@name='Tags']/@value">,unique</append>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='PhysicalDamageResist']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='HypothermalResist']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='HyperthermalResist']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='DegradationMax']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='DegradationPerUse']/@tier">1,80</set>
+	<!-- ALL: Sorcerer Armor Tiers 1-6 -->
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group/requirement[@name='RequirementItemTier']/@operation">GTE</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER 1']/requirement[@name='RequirementItemTier']/@value">1</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER 2']/requirement[@name='RequirementItemTier']/@value">30</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER 3']/requirement[@name='RequirementItemTier']/@value">40</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER 4']/requirement[@name='RequirementItemTier']/@value">50</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER 5']/requirement[@name='RequirementItemTier']/@value">60</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER 6']/requirement[@name='RequirementItemTier']/@value">80</set>
+	
+	<!-- Summon Books -->
+	<set xpath="/items/item[@name='book_SummonFamiliars']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	
+	<!-- Arcane Armor: T1 -->
+	<append xpath="/items/item[@name='sorceryArmor_Hood']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Bandana']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Bandana" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Robe']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Robe" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Chest']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Chest" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Shirt']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Shirt" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Gloves']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Gloves" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Leg']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Leg" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Pants']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Pants" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Boots']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Boots" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryAccessory_Shades']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryAccessory_Shades" operation="LT" value="30"/></append>
+	<!-- Arcane Armor: T2 -->
+	<append xpath="/items/item[@name='sorceryArmor_Hood']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Bandana']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmor_Bandana" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Robe']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmor_Robe" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Chest']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmor_Chest" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Shirt']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmor_Shirt" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Gloves']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmor_Gloves" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Leg']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmor_Leg" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Pants']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmor_Pants" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Boots']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmor_Boots" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryAccessory_Shades']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryAccessory_Shades" operation="LT" value="40"/></append>
+	<!-- Arcane Armor: T3 -->
+	<append xpath="/items/item[@name='sorceryArmor_Hood']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Bandana']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmor_Bandana" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Robe']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmor_Robe" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Chest']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmor_Chest" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Shirt']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmor_Shirt" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Gloves']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmor_Gloves" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Leg']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmor_Leg" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Pants']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmor_Pants" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Boots']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmor_Boots" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryAccessory_Shades']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryAccessory_Shades" operation="LT" value="50"/></append>
+	<!-- Arcane Armor: T4 -->
+	<append xpath="/items/item[@name='sorceryArmor_Hood']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Bandana']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmor_Bandana" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Robe']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmor_Robe" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Chest']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmor_Chest" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Shirt']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmor_Shirt" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Gloves']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmor_Gloves" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Leg']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmor_Leg" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Pants']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmor_Pants" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Boots']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmor_Boots" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryAccessory_Shades']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryAccessory_Shades" operation="LT" value="60"/></append>
+	<!-- Arcane Armor: T5 -->
+	<append xpath="/items/item[@name='sorceryArmor_Hood']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Bandana']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmor_Bandana" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Robe']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmor_Robe" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Chest']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmor_Chest" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Shirt']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmor_Shirt" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Gloves']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmor_Gloves" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Leg']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmor_Leg" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Pants']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmor_Pants" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmor_Boots']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmor_Boots" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryAccessory_Shades']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryAccessory_Shades" operation="LT" value="80"/></append>
+	
+	<!-- Fire Armor: T1 -->
+	<append xpath="/items/item[@name='sorceryArmorFire_Hood']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Hood" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Bandana']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Bandana" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Robe']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Robe" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Chest']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Chest" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Shirt']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Shirt" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Gloves']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Gloves" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Leg']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Leg" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Pants']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Pants" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Boots']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Boots" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryFire_Shades']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryAccessoryFire_Shades" operation="LT" value="30"/></append>
+	<!-- Fire Armor: T2 -->
+	<append xpath="/items/item[@name='sorceryArmorFire_Hood']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Hood" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Bandana']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Bandana" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Robe']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Robe" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Chest']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Chest" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Shirt']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Shirt" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Gloves']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Gloves" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Leg']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Leg" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Pants']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Pants" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Boots']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Boots" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryFire_Shades']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryAccessoryFire_Shades" operation="LT" value="40"/></append>
+	<!-- Fire Armor: T3 -->
+	<append xpath="/items/item[@name='sorceryArmorFire_Hood']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Hood" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Bandana']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Bandana" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Robe']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Robe" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Chest']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Chest" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Shirt']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Shirt" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Gloves']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Gloves" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Leg']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Leg" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Pants']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Pants" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Boots']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Boots" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryFire_Shades']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryAccessoryFire_Shades" operation="LT" value="50"/></append>
+	<!-- Fire Armor: T4 -->
+	<append xpath="/items/item[@name='sorceryArmorFire_Hood']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Hood" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Bandana']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Bandana" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Robe']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Robe" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Chest']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Chest" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Shirt']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Shirt" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Gloves']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Gloves" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Leg']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Leg" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Pants']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Pants" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Boots']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Boots" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryFire_Shades']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryAccessoryFire_Shades" operation="LT" value="60"/></append>
+	<!-- Fire Armor: T5 -->
+	<append xpath="/items/item[@name='sorceryArmorFire_Hood']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Hood" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Bandana']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Bandana" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Robe']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Robe" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Chest']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Chest" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Shirt']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Shirt" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Gloves']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Gloves" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Leg']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Leg" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Pants']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Pants" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorFire_Boots']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorFire_Boots" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryFire_Shades']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryAccessoryFire_Shades" operation="LT" value="80"/></append>
+	
+	<!-- Ice Armor: T1 -->
+	<append xpath="/items/item[@name='sorceryArmorIce_Hood']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Hood" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Bandana']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Bandana" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Robe']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Robe" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Chest']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Chest" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Shirt']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Shirt" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Gloves']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Gloves" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Leg']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Leg" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Pants']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Pants" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Boots']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Boots" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryIce_Shades']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryAccessoryIce_Shades" operation="LT" value="30"/></append>
+	<!-- Ice Armor: T2 -->
+	<append xpath="/items/item[@name='sorceryArmorIce_Hood']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Hood" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Bandana']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Bandana" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Robe']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Robe" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Chest']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Chest" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Shirt']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Shirt" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Gloves']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Gloves" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Leg']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Leg" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Pants']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Pants" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Boots']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Boots" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryIce_Shades']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryAccessoryIce_Shades" operation="LT" value="40"/></append>
+	<!-- Ice Armor: T3 -->
+	<append xpath="/items/item[@name='sorceryArmorIce_Hood']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Hood" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Bandana']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Bandana" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Robe']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Robe" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Chest']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Chest" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Shirt']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Shirt" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Gloves']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Gloves" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Leg']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Leg" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Pants']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Pants" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Boots']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Boots" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryIce_Shades']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryAccessoryIce_Shades" operation="LT" value="50"/></append>
+	<!-- Ice Armor: T4 -->
+	<append xpath="/items/item[@name='sorceryArmorIce_Hood']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Hood" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Bandana']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Bandana" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Robe']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Robe" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Chest']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Chest" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Shirt']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Shirt" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Gloves']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Gloves" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Leg']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Leg" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Pants']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Pants" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Boots']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Boots" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryIce_Shades']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryAccessoryIce_Shades" operation="LT" value="60"/></append>
+	<!-- Ice Armor: T5 -->
+	<append xpath="/items/item[@name='sorceryArmorIce_Hood']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Hood" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Bandana']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Bandana" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Robe']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Robe" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Chest']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Chest" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Shirt']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Shirt" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Gloves']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Gloves" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Leg']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Leg" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Pants']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Pants" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorIce_Boots']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorIce_Boots" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryIce_Shades']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryAccessoryIce_Shades" operation="LT" value="80"/></append>
+	
+	<!-- Lightning Armor: T1 -->
+	<append xpath="/items/item[@name='sorceryArmorLightning_Hood']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Hood" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Bandana']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Bandana" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Robe']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Robe" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Chest']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Chest" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Shirt']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Shirt" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Gloves']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Gloves" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Leg']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Leg" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Pants']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Pants" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Boots']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Boots" operation="LT" value="30"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryLightning_Shades']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryAccessoryLightning_Shades" operation="LT" value="30"/></append>
+	<!-- Lightning Armor: T2 -->
+	<append xpath="/items/item[@name='sorceryArmorLightning_Hood']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Hood" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Bandana']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Bandana" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Robe']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Robe" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Chest']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Chest" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Shirt']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Shirt" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Gloves']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Gloves" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Leg']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Leg" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Pants']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Pants" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Boots']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Boots" operation="LT" value="40"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryLightning_Shades']/effect_group[@name='TIER 2']"><requirement name="RequirementItemTier" tier="sorceryAccessoryLightning_Shades" operation="LT" value="40"/></append>
+	<!-- Lightning Armor: T3 -->
+	<append xpath="/items/item[@name='sorceryArmorLightning_Hood']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Hood" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Bandana']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Bandana" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Robe']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Robe" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Chest']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Chest" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Shirt']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Shirt" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Gloves']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Gloves" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Leg']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Leg" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Pants']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Pants" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Boots']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Boots" operation="LT" value="50"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryLightning_Shades']/effect_group[@name='TIER 3']"><requirement name="RequirementItemTier" tier="sorceryAccessoryLightning_Shades" operation="LT" value="50"/></append>
+	<!-- Lightning Armor: T4 -->
+	<append xpath="/items/item[@name='sorceryArmorLightning_Hood']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Hood" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Bandana']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Bandana" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Robe']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Robe" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Chest']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Chest" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Shirt']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Shirt" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Gloves']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Gloves" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Leg']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Leg" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Pants']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Pants" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Boots']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Boots" operation="LT" value="60"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryLightning_Shades']/effect_group[@name='TIER 4']"><requirement name="RequirementItemTier" tier="sorceryAccessoryLightning_Shades" operation="LT" value="60"/></append>
+	<!-- Lightning Armor: T5 -->
+	<append xpath="/items/item[@name='sorceryArmorLightning_Hood']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Hood" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Bandana']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Bandana" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Robe']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Robe" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Chest']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Chest" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Shirt']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Shirt" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Gloves']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Gloves" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Leg']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Leg" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Pants']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Pants" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryArmorLightning_Boots']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryArmorLightning_Boots" operation="LT" value="80"/></append>
+	<append xpath="/items/item[@name='sorceryAccessoryLightning_Shades']/effect_group[@name='TIER 5']"><requirement name="RequirementItemTier" tier="sorceryAccessoryLightning_Shades" operation="LT" value="80"/></append>
+	
+<!-- ALL: Staff Weapons -->
+	<set xpath="/items/item[starts-with(@name,'staff')]/effect_group/passive_effect[@name='DegradationPerUse']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name,'staff')]/effect_group/passive_effect[@name='DegradationMax']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name,'staff')]/effect_group/passive_effect[@name='EntityDamage']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name,'staff')]/effect_group/passive_effect[@name='BlockDamage']/@tier">1,80</set>
+	
+	<!-- ALL: Secondary Weapons -->
+	<set xpath="/items/item[starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='DegradationPerUse']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='DegradationMax']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='EntityDamage']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='BlockDamage']/@tier">1,80</set>
+
+	<!-- Mod amount for Weapons -->
+	<set xpath="/items/item[starts-with(@name,'staff') or starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	<set xpath="/items/item[starts-with(@name,'staff') or starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	
+<!-- ALL: Spell Turrets -->
+	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='MagazineSize']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='DegradationPerUse']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='DegradationMax']/@tier">1,80</set>
+	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	
+<!-- SPELL ARROWS + BOLTS -->
+	<append xpath="/items/item[@name='DFgunTazasBow']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellArrowFire,spellArrowIce,spellArrowLightning,spellArrowOmni</append>
+	<append xpath="/items/item[@name='DFgunTitaniumCrossbow']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBoltFire,spellBoltIce,spellBoltLightning,spellBoltOmni</append>
+	<set xpath="/items/item[@name='gunBowFailnot']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoArrowIron,ammoArrowSteelAP,ammoArrowFlaming,ammoArrowExploding,DFammoArrowTitanium,ammoArrowExplodingPulse,spellArrowFire,spellArrowIce,spellArrowLightning,spellArrowOmni
+	</set>
+
+	<!-- Spell Ammo -->
+	<append xpath="//item[@name='DFgunPorkinsShotgun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBulletShell_Fire,spellBulletShell_Ice,spellBulletShell_Lightning,spellBulletShell_Omni</append>
+	<append xpath="//item[@name='DFgunBlackSky' or @name='DFgunWinchesterRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet44_Fire,spellBullet44_Ice,spellBullet44_Lightning,spellBullet44_Omni</append>
+	<!-- <append xpath="//item[@name='DFgunWinchesterRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet44_Fire,spellBullet44_Ice,spellBullet44_Lightning,spellBullet44_Omni</append> -->
+	<append xpath="//item[@name='DFgunM4A1']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet762_Fire,spellBullet762_Ice,spellBullet762_Lightning,spellBullet762_Omni</append>
+	<append xpath="//item[@name='DFgunP225']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet9mm_Fire,spellBullet9mm_Ice,spellBullet9mm_Lightning,spellBullet9mm_Omni</append>	
+	
+<!-- FAMILIARS -->
+	<set xpath="/items/item[@name='sorceryFamiliarArcane' or @name='sorceryFamiliarFire' or @name='sorceryFamiliarIce' or @name='sorceryFamiliarLightning' or @name='incantation_SummonOmniPack' or @name='book_SummonFamiliars']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	<set xpath="/items/item[@name='sorceryFamiliarArcane' or @name='sorceryFamiliarFire' or @name='sorceryFamiliarIce' or @name='sorceryFamiliarLightning' or @name='incantation_SummonOmniPack' or @name='book_SummonFamiliars']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	
+	<!-- Mod amount for omni pack -->
+	<set xpath="/items/item[@name='incantation_SummonOmniPack']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	<set xpath="/items/item[@name='incantation_SummonOmniPack']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+
+	<!-- Mod amount for omni elemental -->
+	<set xpath="/items/item[@name='incantation_SummonElementalOmni']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	<set xpath="/items/item[@name='incantation_SummonElementalOmni']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+
+
+
+	<append xpath="/items/item[@name='DFScifiAIOT']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">,resourceExtractOmni,resourceEssenceFire,resourceExtractFire,resourceEssenceIce,resourceExtractIce,resourceEssenceLightning,resourceExtractLightning,resourceEssenceUnholy,resourceExtractUnholy,resourceEssenceHoly,resourceExtractHoly,resourceCrystalArcane,resourceCrystalFire,resourceCrystalIce,resourceCrystalLightning,resourceCrystalUnholy,resourceCrystalHoly</append>
+	<append xpath="/items">	
+		<!-- Tech Armor -->
+		<!-- ARCANE -->
+		<item name="sorc_DFarmorTechMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="armorMilitaryHelmet"/>
+			<property name="DisplayType" value="sorceryArmor"/>
+			<property name="Material" value="MmilitaryFiber"/>
+			<property name="RepairTools" value="DFresourceEnergyCell"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="DescriptionKey" value="sorc_DFarmorTechGroupDesc"/>
+			<property name="Group" value="Armor,TCArmor,Clothing,ClothingArcane"/>
+			<property name="ActionSkillGroup" value="Clothing/Armor"/>
+			<property name="CraftingSkillGroup" value="craftSkillArmor"/>
+			<property name="RepairExpMultiplier" value="12.8"/>
+			<property name="EconomicValue" value="700"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="UnlockedBy" value="perkCraftFutureTech"/>
+		</item>
+
+		<item name="sorc_DFarmorTechHelmet">
+			<property name="CustomIcon" value="armorMilitaryHelmet"/>
+			<property name="CustomIconTint" value="ae92d5"/>
+			<property name="Extends" value="sorc_DFarmorTechMaster"/>
+			<property name="Tags" value="head,armor,armorHead,sorceryArmor,sorceryArmorHead,sorceryArmorSetArcane,lightarmor,canHaveCosmetic,powerArmorHelmet,laserCraftng,armorPenalty,perkCraftFutureTech,powerArmor"/>
+			<property name="EquipSlot" value="Head"/>
+			<effect_group>
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="11"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="1,65" tier="1,80" tags="heat,electrical"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="2,107" tier="1,80" />
+				<passive_effect name="HyperthermalResist" operation="base_add" value="2,107" tier="1,80"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1000,3000" tier="1,80"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="Mobility" operation="perc_add" value="-.03"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.021" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.042" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="-.42"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+				<passive_effect name="BuffResistance" operation="base_add" value=".12" tags="buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffLaceration,buffInfectionCatch,buffInjuryBleedingBarbedWire"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.2" tags="buffRadiationNew,buffRadiationStrong,buffRadiation03,buffElementHot,buffElementSweltering,buffElementCold,buffElementFreezing"/> 
+				<passive_effect name="BuffResistance" operation="base_add" value="0.15" tags="buffBurningDemonBoss,buffBurning,buffBurningElement,buffBurningMolotov,buffBurningMolotov2,buffBurningFlamingArrow,buffDemonFireball,buffBurningMolotovDM1,buffBurningMolotovDM2,buffBurningMolotovDM3,buffBurningMolotovDM4,buffBurningMolotovDM5,buffIsOnFire,buffBurningFlamingArrowDM1,buffBurningFlamingArrowDM2,buffBurningFlamingArrowDM3,buffBurningFlamingArrowDM4,buffBurningFlamingArrowDM5,buffBurningEnvironmentHack,buffBurningEnvironment,buffDemonFireballEffect,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/> 
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffHazmatMask"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffHazmatMask"/>
+			</effect_group>
+			
+			<property class="UMA">
+				<property name="Mesh" value="armor_hazmat_head"/>
+				<property name="Overlay0" value="armor_hazmat_hood"/>
+				<property name="Layer" value="middle"/>
+				<property name="UISlot" value="Headgear"/>
+				<property name="Mask1" value="Head" param1="inner"/>
+				<property name="Mask3" value="Face" param1="inner"/>
+				<property name="Mask4" value="Face" param1="middle"/>
+				<property name="Mask5" value="Face" param1="outer"/>
+				<property name="ShowAltHair" value="true"/>
+				<property name="UMA.Overlay0Tint" value="174,146,213"/>
+			</property>
+			
+			<effect_group name="CLEANUP">
+				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="buffSorceryValidateArmorSet_Arcane"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value="0" />	
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar=".head_sorceryDamage" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar=".head_essenceFireHarvest" operation="set" value="0" />
+			</effect_group>
+			
+			<effect_group name="TIER ALL">
+				<!-- Arcane Armor Set -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffSorceryValidateArmorSet_Arcane"/>
+			</effect_group>
+			
+			<effect_group name="TIER 1">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="0.05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".025" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".025" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".025" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".011" />				
+			</effect_group>
+			<effect_group name="TIER 2">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="30"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="150" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".33" />
+			</effect_group>
+			<effect_group name="TIER 3">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="40"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="200" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".429" />	
+			</effect_group>
+			<effect_group name="TIER 4">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="50"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="250" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="2.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".55" />				
+			</effect_group>
+			<effect_group name="TIER 5">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="60"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="300" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="3" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".66" />				
+			</effect_group>
+			<effect_group name="TIER 6">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="80"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="390" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="3.9" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".858" />				
+			</effect_group>
+			<effect_group name="DISPLAY">
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".head_sorceryDamage" operation="set" value="@$head_sorceryDamage" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".head_sorceryDamage" operation="multiply" value="100" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".head_essenceFireHarvest" operation="set" value="@$head_essenceFireHarvest" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".head_essenceFireHarvest" operation="multiply" value="100" />
+			</effect_group>	
+		</item>
+
+		<item name="sorc_DFarmorTechVest">
+			<property name="CustomIcon" value="armorMilitaryVest"/>
+			<property name="CustomIconTint" value="ae92d5"/>
+			<property name="Extends" value="sorc_DFarmorTechMaster"/>
+			<property name="Tags" value="upperbody,chest,armor,armorChest,sorceryArmor,sorceryArmorSetArcane,lightarmor,armorRigging,canHaveCosmetic,powerArmorShirt,laserCraftng,armorPenalty,perkCraftFutureTech,powerArmor"/>
+			<property name="EquipSlot" value="Chest"/>
+			<effect_group>
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="11"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="1,65" tier="1,80" tags="heat,electrical"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="2,107" tier="1,80" />
+				<passive_effect name="HyperthermalResist" operation="base_add" value="2,107" tier="1,80"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1000,3000" tier="1,80"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="Mobility" operation="perc_add" value="-.03"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.021" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.042" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="-.42"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+				<passive_effect name="BuffResistance" operation="base_add" value=".12" tags="buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffLaceration,buffInfectionCatch,buffInjuryBleedingBarbedWire"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.2" tags="buffRadiationNew,buffRadiationStrong,buffRadiation03,buffElementHot,buffElementSweltering,buffElementCold,buffElementFreezing"/> 
+				<passive_effect name="BuffResistance" operation="base_add" value="0.15" tags="buffBurningDemonBoss,buffBurning,buffBurningElement,buffBurningMolotov,buffBurningMolotov2,buffBurningFlamingArrow,buffDemonFireball,buffBurningMolotovDM1,buffBurningMolotovDM2,buffBurningMolotovDM3,buffBurningMolotovDM4,buffBurningMolotovDM5,buffIsOnFire,buffBurningFlamingArrowDM1,buffBurningFlamingArrowDM2,buffBurningFlamingArrowDM3,buffBurningFlamingArrowDM4,buffBurningFlamingArrowDM5,buffBurningEnvironmentHack,buffBurningEnvironment,buffDemonFireballEffect,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>			
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffHazmatShirt"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffHazmatShirt"/>
+			</effect_group>
+			<property class="UMA">
+				<property name="Mesh" value="armor_kevlar_vest"/>
+				<property name="Overlay0" value="armor_kevlar_vest"/>
+				<property name="Layer" value="2"/>
+				<property name="UISlot" value="ChestArmor"/>
+				<property name="UMA.Overlay0Tint" value="174,146,213"/>
+			</property>
+			
+			<effect_group name="CLEANUP">
+				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="buffSorceryValidateArmorSet_Arcane"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value="0" />	
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar=".chest_sorceryDamage" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar=".chest_essenceFireHarvest" operation="set" value="0" />
+			</effect_group>
+			
+			<effect_group name="TIER ALL">
+				<!-- Arcane Armor Set -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffSorceryValidateArmorSet_Arcane"/>
+			</effect_group>
+			
+			<effect_group name="TIER 1">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="0.05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".025" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".025" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".025" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".011" />				
+			</effect_group>
+			<effect_group name="TIER 2">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="30"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="150" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".33" />
+			</effect_group>
+			<effect_group name="TIER 3">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="40"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="200" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".429" />	
+			</effect_group>
+			<effect_group name="TIER 4">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="50"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="250" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="2.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".55" />				
+			</effect_group>
+			<effect_group name="TIER 5">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="60"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="300" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="3" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".66" />				
+			</effect_group>
+			<effect_group name="TIER 6">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="80"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="390" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="3.9" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".858" />				
+			</effect_group>
+			<effect_group name="DISPLAY">
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".chest_sorceryDamage" operation="set" value="@$chest_sorceryDamage" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".chest_sorceryDamage" operation="multiply" value="100" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".chest_essenceFireHarvest" operation="set" value="@$chest_essenceFireHarvest" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".chest_essenceFireHarvest" operation="multiply" value="100" />
+			</effect_group>			
+		</item>
+
+		<item name="sorc_DFarmorTechGloves">
+			<property name="CustomIcon" value="armorMilitaryGloves"/>
+			<property name="CustomIconTint" value="ae92d5"/>
+			<property name="Extends" value="sorc_DFarmorTechMaster"/>
+			<property name="Tags" value="upperbody,hands,armor,armorHands,sorceryArmor,sorceryArmorSetArcane,lightarmor,canHaveCosmetic,powerArmorGloves,laserCraftng,armorPenalty,perkCraftFutureTech,powerArmor"/>
+			<property name="EquipSlot" value="Hands"/>
+			<effect_group>
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="11"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="1,65" tier="1,80" tags="heat,electrical"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="2,107" tier="1,80" />
+				<passive_effect name="HyperthermalResist" operation="base_add" value="2,107" tier="1,80"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1000,3000" tier="1,80"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="Mobility" operation="perc_add" value="-.03"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.021" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.042" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="-.42"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+				<passive_effect name="BuffResistance" operation="base_add" value=".12" tags="buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffLaceration,buffInfectionCatch,buffInjuryBleedingBarbedWire"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.2" tags="buffRadiationNew,buffRadiationStrong,buffRadiation03,buffElementHot,buffElementSweltering,buffElementCold,buffElementFreezing"/> 
+				<passive_effect name="BuffResistance" operation="base_add" value="0.15" tags="buffBurningDemonBoss,buffBurning,buffBurningElement,buffBurningMolotov,buffBurningMolotov2,buffBurningFlamingArrow,buffDemonFireball,buffBurningMolotovDM1,buffBurningMolotovDM2,buffBurningMolotovDM3,buffBurningMolotovDM4,buffBurningMolotovDM5,buffIsOnFire,buffBurningFlamingArrowDM1,buffBurningFlamingArrowDM2,buffBurningFlamingArrowDM3,buffBurningFlamingArrowDM4,buffBurningFlamingArrowDM5,buffBurningEnvironmentHack,buffBurningEnvironment,buffDemonFireballEffect,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>				
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffHazmatGloves"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffHazmatGloves"/>	
+			</effect_group>
+			<property class="UMA">
+				<property name="Mesh" value="armor_kevlar_gloves"/>
+				<property name="Overlay0" value="armor_kevlar_gloves"/>
+				<property name="Layer" value="0"/>
+				<property name="UISlot" value="Gloves"/>
+				<property name="UMA.Overlay0Tint" value="174,146,213"/>
+			</property>
+			
+			<effect_group name="CLEANUP">
+				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="buffSorceryValidateArmorSet_Arcane"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value="0" />	
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar=".gloves_sorceryDamage" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar=".gloves_essenceFireHarvest" operation="set" value="0" />
+			</effect_group>
+			
+			<effect_group name="TIER ALL">
+				<!-- Arcane Armor Set -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffSorceryValidateArmorSet_Arcane"/>
+			</effect_group>
+			
+			<effect_group name="TIER 1">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="0.05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".025" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".025" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".025" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".011" />				
+			</effect_group>
+			<effect_group name="TIER 2">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="30"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="150" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".33" />
+			</effect_group>
+			<effect_group name="TIER 3">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="40"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="200" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".429" />	
+			</effect_group>
+			<effect_group name="TIER 4">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="50"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="250" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="2.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".55" />				
+			</effect_group>
+			<effect_group name="TIER 5">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="60"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="300" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="3" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".66" />				
+			</effect_group>
+			<effect_group name="TIER 6">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="80"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="390" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="3.9" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".858" />				
+			</effect_group>
+			<effect_group name="DISPLAY">
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".gloves_sorceryDamage" operation="set" value="@$gloves_sorceryDamage" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".gloves_sorceryDamage" operation="multiply" value="100" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".gloves_essenceFireHarvest" operation="set" value="@$gloves_essenceFireHarvest" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".gloves_essenceFireHarvest" operation="multiply" value="100" />
+			</effect_group>	
+			
+		</item>
+
+		<item name="sorc_DFarmorTechLegs">
+			<property name="CustomIcon" value="armorMilitaryLegs"/>
+			<property name="CustomIconTint" value="ae92d5"/>
+			<property name="Extends" value="sorc_DFarmorTechMaster"/>
+			<property name="Tags" value="lowerbody,legs,armor,armorLegs,sorceryArmor,sorceryArmorSetArcane,lightarmor,canHaveCosmetic,powerArmorPants,laserCraftng,armorPenalty,perkCraftFutureTech,powerArmor"/>
+			<property name="EquipSlot" value="Legs"/>
+			<effect_group>
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="11"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="1,65" tier="1,80" tags="heat,electrical"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="2,107" tier="1,80" />
+				<passive_effect name="HyperthermalResist" operation="base_add" value="2,107" tier="1,80"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1000,3000" tier="1,80"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="Mobility" operation="perc_add" value="-.03"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.021" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.042" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="-.42"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+				<passive_effect name="BuffResistance" operation="base_add" value=".12" tags="buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffLaceration,buffInfectionCatch,buffInjuryBleedingBarbedWire"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.2" tags="buffRadiationNew,buffRadiationStrong,buffRadiation03,buffElementHot,buffElementSweltering,buffElementCold,buffElementFreezing"/> 
+				<passive_effect name="BuffResistance" operation="base_add" value="0.15" tags="buffBurningDemonBoss,buffBurning,buffBurningElement,buffBurningMolotov,buffBurningMolotov2,buffBurningFlamingArrow,buffDemonFireball,buffBurningMolotovDM1,buffBurningMolotovDM2,buffBurningMolotovDM3,buffBurningMolotovDM4,buffBurningMolotovDM5,buffIsOnFire,buffBurningFlamingArrowDM1,buffBurningFlamingArrowDM2,buffBurningFlamingArrowDM3,buffBurningFlamingArrowDM4,buffBurningFlamingArrowDM5,buffBurningEnvironmentHack,buffBurningEnvironment,buffDemonFireballEffect,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>				
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffHazmatPants"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffHazmatPants"/>
+			</effect_group>
+			<property class="UMA">
+				<property name="Mesh" value="armor_kevlar_legarmor"/>
+				<property name="Overlay0" value="armor_kevlar_legarmor"/>
+				<property name="Layer" value="3"/>
+				<property name="UISlot" value="LegArmor"/>
+				<property name="UMA.Overlay0Tint" value="174,146,213"/>
+			</property>
+
+			<effect_group name="CLEANUP">
+				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="buffSorceryValidateArmorSet_Arcane"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value="0" />	
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar=".leg_sorceryDamage" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar=".leg_essenceFireHarvest" operation="set" value="0" />
+			</effect_group>
+			
+			<effect_group name="TIER ALL">
+				<!-- Arcane Armor Set -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffSorceryValidateArmorSet_Arcane"/>
+			</effect_group>
+			
+			<effect_group name="TIER 1">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="0.05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".025" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".025" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".025" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".011" />				
+			</effect_group>
+			<effect_group name="TIER 2">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="30"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="150" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".33" />
+			</effect_group>
+			<effect_group name="TIER 3">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="40"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="200" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".429" />	
+			</effect_group>
+			<effect_group name="TIER 4">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="50"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="250" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="2.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".55" />				
+			</effect_group>
+			<effect_group name="TIER 5">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="60"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="300" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="3" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".66" />				
+			</effect_group>
+			<effect_group name="TIER 6">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="80"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="390" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="3.9" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".858" />				
+			</effect_group>
+			<effect_group name="DISPLAY">
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".leg_sorceryDamage" operation="set" value="@$leg_sorceryDamage" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".leg_sorceryDamage" operation="multiply" value="100" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".leg_essenceFireHarvest" operation="set" value="@$leg_essenceFireHarvest" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".leg_essenceFireHarvest" operation="multiply" value="100" />
+			</effect_group>	
+
+		</item>
+
+		<item name="sorc_DFarmorTechBoots">
+			<property name="CustomIcon" value="armorMilitaryBoots"/>
+			<property name="CustomIconTint" value="ae92d5"/>
+			<property name="Extends" value="sorc_DFarmorTechMaster"/>
+			<property name="Tags" value="lowerbody,feet,armor,armorFeet,sorceryArmor,sorceryArmorSetArcane,lightarmor,canHaveCosmetic,powerArmorBoots,laserCraftng,armorPenalty,perkCraftFutureTech,powerArmor"/>
+			<property name="EquipSlot" value="Feet"/>
+			<effect_group>
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="11"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="1,65" tier="1,80" tags="heat,electrical"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="2,107" tier="1,80" />
+				<passive_effect name="HyperthermalResist" operation="base_add" value="2,107" tier="1,80"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1000,3000" tier="1,80"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="Mobility" operation="perc_add" value="-.03"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.021" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.042" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="-.42"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+				<passive_effect name="BuffResistance" operation="base_add" value=".12" tags="buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffLaceration,buffInfectionCatch,buffInjuryBleedingBarbedWire"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.2" tags="buffRadiationNew,buffRadiationStrong,buffRadiation03,buffElementHot,buffElementSweltering,buffElementCold,buffElementFreezing"/> 
+				<passive_effect name="BuffResistance" operation="base_add" value="0.15" tags="buffBurningDemonBoss,buffBurning,buffBurningElement,buffBurningMolotov,buffBurningMolotov2,buffBurningFlamingArrow,buffDemonFireball,buffBurningMolotovDM1,buffBurningMolotovDM2,buffBurningMolotovDM3,buffBurningMolotovDM4,buffBurningMolotovDM5,buffIsOnFire,buffBurningFlamingArrowDM1,buffBurningFlamingArrowDM2,buffBurningFlamingArrowDM3,buffBurningFlamingArrowDM4,buffBurningFlamingArrowDM5,buffBurningEnvironmentHack,buffBurningEnvironment,buffDemonFireballEffect,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>				
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffHazmatBoots"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffHazmatBoots"/>
+			</effect_group>
+			<property class="UMA">
+				<property name="Mesh" value="armor_kevlar_boots"/>
+				<property name="Overlay0" value="armor_kevlar_boots"/>
+				<property name="Layer" value="0"/>
+				<property name="UISlot" value="Footwear"/>
+				<property name="UMA.Overlay0Tint" value="174,146,213"/>
+			</property>
+			
+			<effect_group name="CLEANUP">
+				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="buffSorceryValidateArmorSet_Arcane"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value="0" />	
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar=".boots_sorceryDamage" operation="set" value="0" />
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar=".boots_essenceFireHarvest" operation="set" value="0" />
+			</effect_group>
+			
+			<effect_group name="TIER ALL">
+				<!-- Arcane Armor Set -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffSorceryValidateArmorSet_Arcane"/>
+			</effect_group>
+			
+			<effect_group name="TIER 1">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="0.05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".025" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".025" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".025" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".011" />				
+			</effect_group>
+			<effect_group name="TIER 2">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="30"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="150" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".75" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".33" />
+			</effect_group>
+			<effect_group name="TIER 3">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="40"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="200" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".975" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".429" />	
+			</effect_group>
+			<effect_group name="TIER 4">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="50"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="250" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="2.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value="1.25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".55" />				
+			</effect_group>
+			<effect_group name="TIER 5">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="60"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="300" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="3" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value="1.5" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".66" />				
+			</effect_group>
+			<effect_group name="TIER 6">
+					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="80"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="390" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="3.9" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value="1.95" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".858" />				
+			</effect_group>
+			<effect_group name="DISPLAY">
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".boots_sorceryDamage" operation="set" value="@$boots_sorceryDamage" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".boots_sorceryDamage" operation="multiply" value="100" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".boots_essenceFireHarvest" operation="set" value="@$boots_essenceFireHarvest" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".boots_essenceFireHarvest" operation="multiply" value="100" />
+			</effect_group>	
+			
+		</item>
+	</append>
+</Vux>

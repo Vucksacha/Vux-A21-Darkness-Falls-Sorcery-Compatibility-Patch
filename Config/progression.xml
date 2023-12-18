@@ -1,0 +1,89 @@
+<Vux>		
+	<!-- Spellcasts -->
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorcerySpellcast')]/effect_group/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorcerySpellcast')]/effect_group/passive_effect[@name='CraftingTier']/@value">10,30,40,50,60,80</set>
+
+	<!-- Staves -->
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorceryStaff')]/effect_group/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorceryStaff')]/effect_group/passive_effect[@name='CraftingTier']/@value">10,30,40,50,60,80</set>
+
+	<!-- Sorcerer Armors -->
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorceryArmor')]/effect_group/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorceryArmor')]/effect_group/passive_effect[@name='CraftingTier']/@value">10,30,40,50,60,80</set>
+	
+	<!-- Spell Turrets -->
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorceryTrap1')]/effect_group/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorceryTrap1')]/effect_group/passive_effect[@name='CraftingTier']/@value">10,30,40,50,60,80</set>
+	
+	<!-- Secondary Weapons -->
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorcerySecondary')]/effect_group/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorcerySecondary')]/effect_group/passive_effect[@name='CraftingTier']/@value">10,30,40,50,60,80</set>
+	
+	<!-- Secondary Weapons -->
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorceryWand')]/effect_group/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorceryWand')]/effect_group/passive_effect[@name='CraftingTier']/@value">10,30,40,50,60,80</set>
+	
+	<!-- Spell Turrets: Counter unintended Spell Turret inherit (DF) -->
+	<set xpath="/progression/perks/perk[@name='perkTurrets']/effect_group[@name='General and deployed turrets']/passive_effect[@name='EntityDamage' and @tags='perkTurrets']">
+		<requirement name="!ItemHasTags" tags="spellTurret"/>
+	</set>
+	<set xpath="/progression/perks/perk[@name='perkTurrets']/effect_group[@name='General and deployed turrets']/passive_effect[@name='RoundsPerMinute' and @tags='perkTurrets']">
+		<requirement name="!ItemHasTags" tags="spellTurret"/>
+	</set>
+	<!-- FAMILIARS -->
+	<set xpath="/progression/perks/perk[@name='perkSorceryFamiliar']/effect_group[@name='ARCANE FAMILIAR']/passive_effect[@name='CraftingTier']/@value">1,80</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryFireFamiliar']/effect_group[@name='FIRE FAMILIAR']/passive_effect[@name='CraftingTier']/@value">1,80</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryIceFamiliar']/effect_group[@name='ICE FAMILIAR']/passive_effect[@name='CraftingTier']/@value">1,80</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryLightningFamiliar']/effect_group[@name='LIGHTNING FAMILIAR']/passive_effect[@name='CraftingTier']/@value">1,80</set>
+	
+	
+	<append xpath="/progression/perks/perk[@name='perkTheCompletionist']/effect_group[@name='Completionist Bonus']/passive_effect[@name='CraftingTier']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
+	<append xpath="progression/perks/perk[@name='perkCraftFutureTech']/effect_group[1]/passive_effect[@name='RecipeTagUnlocked' and @level='5']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>	
+	<append xpath="progression/perks/perk[@name='perkCraftFutureTech']/effect_group[1]/passive_effect[@name='CraftingTier' and @level='1']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
+	<append xpath="progression/perks/perk[@name='perkCraftFutureTech']/effect_group[1]/passive_effect[@name='CraftingTier' and @level='2']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
+	<append xpath="progression/perks/perk[@name='perkCraftFutureTech']/effect_group[1]/passive_effect[@name='CraftingTier' and @level='3']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
+	<append xpath="progression/perks/perk[@name='perkCraftFutureTech']/effect_group[1]/passive_effect[@name='CraftingTier' and @level='4']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
+	<append xpath="progression/perks/perk[@name='perkCraftFutureTech']/effect_group[1]/passive_effect[@name='CraftingTier' and @level='5']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
+	<append xpath="progression/perks/perk[@name='perkCraftFutureTech']/effect_group[1]/passive_effect[@name='CraftingTime']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
+
+
+
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorceryHarvestWand')]/effect_group/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[starts-with(@name,'perkSorceryHarvestWand')]/effect_group/passive_effect[@name='CraftingTier']/@value">1,30,40,50,60,80</set>
+
+	<!-- Familiars craft levels. Not sure if the progression is right? -->
+	<set xpath="/progression/perks/perk[@name='perkSorceryFamiliar']/effect_group[@name='ARCANE FAMILIAR']/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryFamiliar']/effect_group[@name='ARCANE FAMILIAR']/passive_effect[@name='CraftingTier']/@value">1,30,40,50,60,80</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryFireFamiliar']/effect_group[@name='FIRE FAMILIAR']/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryFireFamiliar']/effect_group[@name='FIRE FAMILIAR']/passive_effect[@name='CraftingTier']/@value">1,30,40,50,60,80</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryIceFamiliar']/effect_group[@name='ICE FAMILIAR']/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryIceFamiliar']/effect_group[@name='ICE FAMILIAR']/passive_effect[@name='CraftingTier']/@value">1,30,40,50,60,80</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryLightningFamiliar']/effect_group[@name='LIGHTNING FAMILIAR']/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryLightningFamiliar']/effect_group[@name='LIGHTNING FAMILIAR']/passive_effect[@name='CraftingTier']/@value">1,30,40,50,60,80</set>
+
+	<!-- Omni elemental and Omni pack -->
+	<set xpath="/progression/perks/perk[@name='perkSorceryScrollMastery']/effect_group/passive_effect[@name='CraftingTier']/@level">0,1,2,3,4,5,6,7,8,9,10</set>
+	<set xpath="/progression/perks/perk[@name='perkSorceryScrollMastery']/effect_group/passive_effect[@name='CraftingTier']/@value">1,9,17,25,33,41,49,57,65,73,80</set>
+
+	<!-- Fix spell trap pickup not working past perkSorceryMageTrapMastery level 4. Shame the GTE operation doesn't work? Was this fixed in Sorcery already? -->
+	<insertAfter xpath="/progression/perks[1]/perk[@name='perkSorceryMageTrapMastery']/effect_group[@name='MASTERY LEVEL']/passive_effect[@name='BlockPickup']">
+		<passive_effect name="BlockPickup" operation="base_set" level="5" value="1" tags="SpellTrap">
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		</passive_effect>
+		<passive_effect name="BlockPickup" operation="base_set" level="6" value="1" tags="SpellTrap">
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		</passive_effect>
+		<passive_effect name="BlockPickup" operation="base_set" level="7" value="1" tags="SpellTrap">
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		</passive_effect>
+		<passive_effect name="BlockPickup" operation="base_set" level="8" value="1" tags="SpellTrap">
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		</passive_effect>
+		<passive_effect name="BlockPickup" operation="base_set" level="9" value="1" tags="SpellTrap">
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		</passive_effect>
+		<passive_effect name="BlockPickup" operation="base_set" level="10" value="1" tags="SpellTrap">
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		</passive_effect>
+	</insertAfter>
+</Vux>

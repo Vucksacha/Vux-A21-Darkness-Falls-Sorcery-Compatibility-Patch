@@ -1,0 +1,17 @@
+<Vux>
+	<remove xpath="/quests/quest/objective//modifier[@type='TrackBlocks']"/>
+	
+	<append xpath="quests/quest[starts-with(@id,'quest_sorcery_fallen')]">
+		<property name="reward_choices_count" value="5" />
+	</append>
+
+
+	<append xpath="quests/quest[@id='quest_sorcery_firebath_t2']"><property name="reward_choices_count" value="5" /></append>
+	<append xpath="quests/quest[@id='quest_sorcery_firetemple_t3']"><property name="reward_choices_count" value="5" /></append>
+	<append xpath="quests/quest[@id='quest_sorcery_icecastle_t3']"><property name="reward_choices_count" value="5" /></append>
+	<append xpath="quests/quest[@id='quest_sorcery_lightningpyramid_t3']"><property name="reward_choices_count" value="5" /></append>	
+	<append xpath="quests/quest[@id='quest_sorcery_firetemple_t5']"><property name="reward_choices_count" value="5" /></append>
+	<append xpath="quests/quest[@id='quest_sorcery_icecastle_t5']"><property name="reward_choices_count" value="5" /></append>
+	<append xpath="quests/quest[@id='quest_sorcery_lightningpyramid_t5']"><property name="reward_choices_count" value="5" /></append>
+
+</Vux>

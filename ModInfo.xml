@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Darkness-Falls-Sorcery-Compatibility-Patch" />
+		<Description value="Compatibility mod for Darkness Falls and Sorcery" />
+		<Author value="Srsly_NotARobot and Vux" />
+		<Version value="SORC 1.942, DF 5.01" />
+		<Website value="http://sorcerymod.com" />
+	</ModInfo>
+</xml>

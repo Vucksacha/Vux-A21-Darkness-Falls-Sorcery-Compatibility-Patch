@@ -1,0 +1,78 @@
+<Vux>
+	
+<!-- MODIFY BUFFS -->
+	<!-- Disable Regen: Fallen -->
+	<prepend xpath="/buffs/buff[@name='buffFallenFire' or @name='buffFallenIce' or @name='buffFallenLightning']/effect_group[@name='ABILITY5: Regenerate']/requirement[1]">
+		<requirement name="NotHasBuff" buff="sorceryDF_DisableRegen"/>
+	</prepend>
+	<append xpath="/buffs/buff[@name='imprint_FireSorcery']">
+		<effect_group name="DAMAGE MULTIPLIER">
+				<requirement name="HasBuff" buff="sorceryFireDamage_x2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$sorceryFireDamage" operation="multiply" value="2">
+				<requirement name="CVarCompare" cvar=".df_sorceryFireDamage_x2" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".df_sorceryFireDamage_x2" operation="set" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/buffs/buff[@name='imprint_IceSorcery']">
+		<effect_group name="DAMAGE MULTIPLIER">
+				<requirement name="HasBuff" buff="sorceryIceDamage_x2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$sorceryIceDamage" operation="multiply" value="2">
+				<requirement name="CVarCompare" cvar=".df_sorceryIceDamage_x2" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".df_sorceryIceDamage_x2" operation="set" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/buffs/buff[@name='imprint_LightningSorcery']">
+		<effect_group name="DAMAGE MULTIPLIER">
+				<requirement name="HasBuff" buff="sorceryLightningDamage_x2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$sorceryLightningDamage" operation="multiply" value="2">
+				<requirement name="CVarCompare" cvar=".df_sorceryLightningDamage_x2" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".df_sorceryLightningDamage_x2" operation="set" value="1"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/buffs/buff[@name='buffScroll_Silence']/effect_group[@name='SCROLL']/requirement[@name='EntityTagCompare']/@tags">,demon</append>
+	<append xpath="buffs/buff[@name='rune_Silence' or @name='buffScroll_Silence']">
+			<effect_group>  
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffLaserWeapon"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLaserWeapon"/>
+			</effect_group>
+	</append>
+
+	<!-- ADD BUFFS -->
+	<append xpath="/buffs" >
+		<buff name="sorceryDF_DisableRegen" hidden="true">
+			<stack_type value="replace"/><duration value="30"/>
+		</buff>
+	<!-- ADD DAMAGE BUFFS -->
+		<buff name="sorceryFireDamage_x2" hidden="true">
+			<stack_type value="replace"/><duration value="10"/>
+		</buff>
+		<buff name="sorceryIceDamage_x2" hidden="true">
+			<stack_type value="replace"/><duration value="10"/>
+		</buff>
+		<buff name="sorceryLightningDamage_x2" hidden="true">
+			<stack_type value="replace"/><duration value="10"/>
+		</buff>	
+
+	</append>
+
+	<!-- Fix sorcery elixirs not applying to all damage/essence find -->
+	<insertAfter xpath="/buffs/buff[@name='buffSorceryManage']/effect_group[@name='CVAR: SORCERY DAMAGE - ALL']/triggered_effect[@value='@$boots_sorceryDamage']">
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$sorceryDamage" operation="add" value="@$elixir_sorceryDamage"/>
+	</insertAfter>
+
+	<insertAfter xpath="/buffs/buff[@name='buffSorceryManage']/effect_group[@name='CVAR: ESSENCE HARVEST - ALL']/triggered_effect[@value='@$boots_sorceryEssenceHarvest']">
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$sorceryAllEssenceHarvest" operation="add" value="@$elixir_essenceHarvest"/>
+	</insertAfter>
+
+	<!-- Fix typos -->
+	<setattribute xpath="//buff[@name='keyAdd_Fire']/effect_group/triggered_effect[@action='ShowToolbeltMessage']" name="message">You acquired a Fire Key!</setattribute>
+	<setattribute xpath="//buff[@name='keyAdd_Ice']/effect_group/triggered_effect[@action='ShowToolbeltMessage']" name="message">You acquired an Ice Key!</setattribute>
+	<setattribute xpath="//buff[@name='keyAdd_Lightning']/effect_group/triggered_effect[@action='ShowToolbeltMessage']" name="message">You acquired a Lightning Key!</setattribute>
+	<setattribute xpath="//buff[@name='keyAdd_Unholy']/effect_group/triggered_effect[@action='ShowToolbeltMessage']" name="message">You acquired an Unholy Key!</setattribute>
+	<setattribute xpath="//buff[@name='keyAdd_Holy']/effect_group/triggered_effect[@action='ShowToolbeltMessage']" name="message">You acquired a Holy Key!</setattribute>
+
+</Vux>

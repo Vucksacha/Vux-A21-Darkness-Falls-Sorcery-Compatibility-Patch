@@ -1,0 +1,19 @@
+Key,english
+sorc_DFarmorTechBoots,Arcane Power Boots
+sorc_DFarmorTechLegs,Arcane Power Legs
+sorc_DFarmorTechVest,Arcane Power Chestplate
+sorc_DFarmorTechHelmet,Arcane Power Helmet
+sorc_DFarmorTechGloves,Arcane Power Gloves
+sorc_DFarmorTechGroupDesc,Arcane Power Armor is the best you can possibly craft. It grants amazing protection physical damage and immunity to most radiation and is infused with Arcane Sorcery. Repaired with Energy Cells.
+cntChestScroll_ArcaneSecureBroadcast,blocks,Container,"Arcane Chest (Remote Crafting Enabled)"
+cntChestScroll_ArcaneInsecureBroadcast,blocks,Container,"Insecure Arcane Chest (Remote Crafting Enabled)"
+cntChestScroll_FireSecureBroadcast,blocks,Container,"Fire Chest (Remote Crafting Enabled)"
+cntChestScroll_FireInsecureBroadcast,blocks,Container,"Insecure Fire Chest (Remote Crafting Enabled)"
+cntChestScroll_IceSecureBroadcast,blocks,Container,"Ice Chest (Remote Crafting Enabled)"
+cntChestScroll_IceInsecureBroadcast,blocks,Container,"Insecure Ice Chest (Remote Crafting Enabled)"
+cntChestScroll_LightningSecureBroadcast,blocks,Container,"Lightning Chest (Remote Crafting Enabled)"
+cntChestScroll_LightningInsecureBroadcast,blocks,Container,"Insecure Lightning Chest (Remote Crafting Enabled)"
+cntChestScroll_UnholySecureBroadcast,blocks,Container,"Unholy Chest (Remote Crafting Enabled)"
+cntChestScroll_UnholyInsecureBroadcast,blocks,Container,"Insecure Unholy Chest (Remote Crafting Enabled)"
+cntChestScroll_HolySecureBroadcast,blocks,Container,"Holy Chest (Remote Crafting Enabled)"
+cntChestScroll_HolyInsecureBroadcast,blocks,Container,"Insecure Holy Chest (Remote Crafting Enabled)"

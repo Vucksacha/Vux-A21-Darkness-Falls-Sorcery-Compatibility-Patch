@@ -1,0 +1,12 @@
+<Vux>
+	<set xpath="/lootcontainers/lootgroup[starts-with(@name,'groupQuestSorcery') and contains(@name,'T1')]/@loot_quality_template">qualQuestFixed20</set>
+	<set xpath="/lootcontainers/lootgroup[starts-with(@name,'groupQuestSorcery') and contains(@name,'T2')]/@loot_quality_template">qualQuestFixed40</set>
+	<set xpath="/lootcontainers/lootgroup[starts-with(@name,'groupQuestSorcery') and contains(@name,'T3')]/@loot_quality_template">qualQuestFixed60</set>
+	
+	<!-- Sorcery writable storage containers the player crafts but with remote crafting-->
+	<append xpath="/lootcontainers">
+		<lootcontainer name="SorcPlayerStorageBroadcast" count="0" size="12,10" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
+			<item name="cobweb" count="1,2"/>
+		</lootcontainer>
+	</append>
+</Vux>

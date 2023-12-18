@@ -1,0 +1,28 @@
+<SorceryCompatibilityDF>
+		
+	<!-- Silence Rune -->
+	<append xpath="/item_modifiers/item_modifier[@name='rune_Silence']/effect_group[@name='RUNE']/requirement[@name='EntityTagCompare']/@tags">,demon</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modGunMeleeRadRemover' or @name='modGunMeleeBlessedMetal']/@installable_tags">,spellcast,spellTurret</append>
+	
+	<!-- Rad Remover -->
+	<append xpath="/item_modifiers/item_modifier[@name='modGunMeleeRadRemover']">
+		<effect_group tiered="false">
+				<requirement name="EntityTagCompare" target="other" tags="demon,sorceryFallen"/>
+				<!-- <requirement name="HoldingItemHasTags" tags="spellcast"/> -->
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="sorceryDF_DisableRegen,buffLaserWeapon">
+				<requirement name="ItemHasTags" tags="spellcast,spellTurret"/>
+			</triggered_effect>
+		</effect_group>
+	</append>
+	<!-- Blessed Metal -->
+	<append xpath="/item_modifiers/item_modifier[@name='modGunMeleeBlessedMetal']">
+		<effect_group tiered="false">
+				<requirement name="EntityTagCompare" target="other" tags="demon,sorceryFallen"/>
+				<!-- <requirement name="HoldingItemHasTags" tags="spellcast"/> -->
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="sorceryFireDamage_x2,sorceryIceDamage_x2,sorceryLightningDamage_x2">
+				<requirement name="ItemHasTags" tags="spellcast,spellTurret"/>
+			</triggered_effect>
+		</effect_group>
+	</append>	
+	
+</SorceryCompatibilityDF>
