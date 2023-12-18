@@ -1,0 +1,7 @@
+<Vux>
+	<insertAfter xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddQuest'][1]">
+		<action class="AddQuest">
+			<property name="quest" value="quest_BasicSurvival1"></property>
+		</action>
+	</insertAfter>
+</Vux>
