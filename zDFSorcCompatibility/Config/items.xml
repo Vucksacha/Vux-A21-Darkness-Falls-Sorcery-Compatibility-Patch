@@ -286,7 +286,6 @@
 	<!-- Spell Ammo -->
 	<append xpath="//item[@name='DFgunPorkinsShotgun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBulletShell_Fire,spellBulletShell_Ice,spellBulletShell_Lightning,spellBulletShell_Omni</append>
 	<append xpath="//item[@name='DFgunBlackSky' or @name='DFgunWinchesterRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet44_Fire,spellBullet44_Ice,spellBullet44_Lightning,spellBullet44_Omni</append>
-	<!-- <append xpath="//item[@name='DFgunWinchesterRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet44_Fire,spellBullet44_Ice,spellBullet44_Lightning,spellBullet44_Omni</append> -->
 	<append xpath="//item[@name='DFgunM4A1']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet762_Fire,spellBullet762_Ice,spellBullet762_Lightning,spellBullet762_Omni</append>
 	<append xpath="//item[@name='DFgunP225']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet9mm_Fire,spellBullet9mm_Ice,spellBullet9mm_Lightning,spellBullet9mm_Omni</append>	
 	
