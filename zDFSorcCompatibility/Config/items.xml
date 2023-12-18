@@ -7,12 +7,12 @@
 	<append xpath="/items/item[starts-with(@name,'spellcast')]/property[@name='Tags']/@value">,unique</append>
 	<set xpath="/items/item[starts-with(@name,'spellcast')]/effect_group[@name='SPELLCAST: TIERED']/passive_effect[@name='DegradationMax']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'spellcast')]/effect_group[@name='SPELLCAST: TIERED']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
-	<set xpath="/items/item[starts-with(@name,'spellcast')]/effect_group[@name='SPELLCAST: TIERED']/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	<set xpath="/items/item[starts-with(@name,'spellcast')]/effect_group[@name='SPELLCAST: TIERED']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 	
 	<!-- ALL: Sorcerer Armor -->
 	<append xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/property[@name='Tags']/@value">,unique</append>
 	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
-	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='PhysicalDamageResist']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='HypothermalResist']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='HyperthermalResist']/@tier">1,80</set>
@@ -28,7 +28,8 @@
 	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER 6']/requirement[@name='RequirementItemTier']/@value">80</set>
 	
 	<!-- Summon Books -->
-	<set xpath="/items/item[@name='book_SummonFamiliars']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	<set xpath="/items/item[@name='book_SummonFamiliars']/effect_group[@name='TIER, REPAIR']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	<set xpath="/items/item[@name='book_SummonFamiliars']/effect_group[@name='TIER, REPAIR']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 	
 	<!-- Arcane Armor: T1 -->
 	<append xpath="/items/item[@name='sorceryArmor_Hood']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="LT" value="30"/></append>
@@ -268,14 +269,14 @@
 
 	<!-- Mod amount for Weapons -->
 	<set xpath="/items/item[starts-with(@name,'staff') or starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
-	<set xpath="/items/item[starts-with(@name,'staff') or starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	<set xpath="/items/item[starts-with(@name,'staff') or starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 	
 <!-- ALL: Spell Turrets -->
 	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='MagazineSize']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='DegradationPerUse']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='DegradationMax']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
-	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 	
 <!-- SPELL ARROWS + BOLTS -->
 	<append xpath="/items/item[@name='DFgunTazasBow']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellArrowFire,spellArrowIce,spellArrowLightning,spellArrowOmni</append>
@@ -291,15 +292,15 @@
 	
 <!-- FAMILIARS -->
 	<set xpath="/items/item[@name='sorceryFamiliarArcane' or @name='sorceryFamiliarFire' or @name='sorceryFamiliarIce' or @name='sorceryFamiliarLightning' or @name='incantation_SummonOmniPack' or @name='book_SummonFamiliars']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
-	<set xpath="/items/item[@name='sorceryFamiliarArcane' or @name='sorceryFamiliarFire' or @name='sorceryFamiliarIce' or @name='sorceryFamiliarLightning' or @name='incantation_SummonOmniPack' or @name='book_SummonFamiliars']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	<set xpath="/items/item[@name='sorceryFamiliarArcane' or @name='sorceryFamiliarFire' or @name='sorceryFamiliarIce' or @name='sorceryFamiliarLightning' or @name='incantation_SummonOmniPack' or @name='book_SummonFamiliars']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 	
 	<!-- Mod amount for omni pack -->
 	<set xpath="/items/item[@name='incantation_SummonOmniPack']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
-	<set xpath="/items/item[@name='incantation_SummonOmniPack']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	<set xpath="/items/item[@name='incantation_SummonOmniPack']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 
 	<!-- Mod amount for omni elemental -->
 	<set xpath="/items/item[@name='incantation_SummonElementalOmni']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
-	<set xpath="/items/item[@name='incantation_SummonElementalOmni']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@value">1,1,2,3,4,5,6,7,8</set>
+	<set xpath="/items/item[@name='incantation_SummonElementalOmni']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 
 
 
@@ -334,7 +335,7 @@
 			<property name="Tags" value="head,armor,armorHead,sorceryArmor,sorceryArmorHead,sorceryArmorSetArcane,lightarmor,canHaveCosmetic,powerArmorHelmet,laserCraftng,armorPenalty,perkCraftFutureTech,powerArmor"/>
 			<property name="EquipSlot" value="Head"/>
 			<effect_group>
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6,7,8,8" tier="1,11,21,31,41,51,61,71,80"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_add" value="11"/>
 				<passive_effect name="ElementalDamageResist" operation="base_add" value="1,65" tier="1,80" tags="heat,electrical"/>
 				<passive_effect name="HypothermalResist" operation="base_add" value="2,107" tier="1,80" />
@@ -452,7 +453,7 @@
 			<property name="Tags" value="upperbody,chest,armor,armorChest,sorceryArmor,sorceryArmorSetArcane,lightarmor,armorRigging,canHaveCosmetic,powerArmorShirt,laserCraftng,armorPenalty,perkCraftFutureTech,powerArmor"/>
 			<property name="EquipSlot" value="Chest"/>
 			<effect_group>
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6,7,8,8" tier="1,11,21,31,41,51,61,71,80"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_add" value="11"/>
 				<passive_effect name="ElementalDamageResist" operation="base_add" value="1,65" tier="1,80" tags="heat,electrical"/>
 				<passive_effect name="HypothermalResist" operation="base_add" value="2,107" tier="1,80" />
@@ -564,7 +565,7 @@
 			<property name="Tags" value="upperbody,hands,armor,armorHands,sorceryArmor,sorceryArmorSetArcane,lightarmor,canHaveCosmetic,powerArmorGloves,laserCraftng,armorPenalty,perkCraftFutureTech,powerArmor"/>
 			<property name="EquipSlot" value="Hands"/>
 			<effect_group>
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6,7,8,8" tier="1,11,21,31,41,51,61,71,80"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_add" value="11"/>
 				<passive_effect name="ElementalDamageResist" operation="base_add" value="1,65" tier="1,80" tags="heat,electrical"/>
 				<passive_effect name="HypothermalResist" operation="base_add" value="2,107" tier="1,80" />
@@ -677,7 +678,7 @@
 			<property name="Tags" value="lowerbody,legs,armor,armorLegs,sorceryArmor,sorceryArmorSetArcane,lightarmor,canHaveCosmetic,powerArmorPants,laserCraftng,armorPenalty,perkCraftFutureTech,powerArmor"/>
 			<property name="EquipSlot" value="Legs"/>
 			<effect_group>
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6,7,8,8" tier="1,11,21,31,41,51,61,71,80"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_add" value="11"/>
 				<passive_effect name="ElementalDamageResist" operation="base_add" value="1,65" tier="1,80" tags="heat,electrical"/>
 				<passive_effect name="HypothermalResist" operation="base_add" value="2,107" tier="1,80" />
@@ -790,7 +791,7 @@
 			<property name="Tags" value="lowerbody,feet,armor,armorFeet,sorceryArmor,sorceryArmorSetArcane,lightarmor,canHaveCosmetic,powerArmorBoots,laserCraftng,armorPenalty,perkCraftFutureTech,powerArmor"/>
 			<property name="EquipSlot" value="Feet"/>
 			<effect_group>
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5,6,7,8" tier="1,11,21,31,41,51,61,71,80"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6,7,8,8" tier="1,11,21,31,41,51,61,71,80"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_add" value="11"/>
 				<passive_effect name="ElementalDamageResist" operation="base_add" value="1,65" tier="1,80" tags="heat,electrical"/>
 				<passive_effect name="HypothermalResist" operation="base_add" value="2,107" tier="1,80" />
