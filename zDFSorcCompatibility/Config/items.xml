@@ -27,10 +27,6 @@
 	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER 5']/requirement[@name='RequirementItemTier']/@value">60</set>
 	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER 6']/requirement[@name='RequirementItemTier']/@value">80</set>
 	
-	<!-- Summon Books -->
-	<set xpath="/items/item[@name='book_SummonFamiliars']/effect_group[@name='TIER, REPAIR']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
-	<set xpath="/items/item[@name='book_SummonFamiliars']/effect_group[@name='TIER, REPAIR']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
-	
 	<!-- Arcane Armor: T1 -->
 	<append xpath="/items/item[@name='sorceryArmor_Hood']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="LT" value="30"/></append>
 	<append xpath="/items/item[@name='sorceryArmor_Bandana']/effect_group[@name='TIER 1']"><requirement name="RequirementItemTier" tier="sorceryArmor_Bandana" operation="LT" value="30"/></append>
@@ -302,7 +298,9 @@
 	<set xpath="/items/item[@name='incantation_SummonElementalOmni']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
 	<set xpath="/items/item[@name='incantation_SummonElementalOmni']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 
-
+	<!-- Summon Books -->
+	<set xpath="/items/item[@name='book_SummonFamiliars']/effect_group[@name='TIER, REPAIR']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
+	<set xpath="/items/item[@name='book_SummonFamiliars']/effect_group[@name='TIER, REPAIR']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 
 	<append xpath="/items/item[@name='DFScifiAIOT']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">,resourceExtractOmni,resourceEssenceFire,resourceExtractFire,resourceEssenceIce,resourceExtractIce,resourceEssenceLightning,resourceExtractLightning,resourceEssenceUnholy,resourceExtractUnholy,resourceEssenceHoly,resourceExtractHoly,resourceCrystalArcane,resourceCrystalFire,resourceCrystalIce,resourceCrystalLightning,resourceCrystalUnholy,resourceCrystalHoly</append>
 	<append xpath="/items">	
