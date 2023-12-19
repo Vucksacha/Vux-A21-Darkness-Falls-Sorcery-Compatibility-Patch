@@ -23,24 +23,18 @@
 		<panel name="header" width="805" height="43" pos="0,88" depth="1" backgroundspritename="ui_game_panel_header">
 			<label depth="3" name="windowName" pos="355,-6" width="250" height="32" text="" text_key="" font_size="32" />
 
-			<rect pos="21,0" width="300" controller="ContainerStandardControls" move_start_bottom_left="true">
+			<rect pos="21,0" width="300" controller="ContainerStandardControls" move_start_bottom_left="true" is_backpack="true">
 				<button depth="3" name="btnClearInventory" sprite="ui_game_symbol_trash" tooltip_key="lblClearInventory" pos="475, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" visible="{creativewindowopen}" />
 
-				<button depth="3" name="btnSort" sprite="ui_game_symbol_sort"  tooltip_key="lblSortContainer"  pos="0, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
+				<button depth="3" name="btnSort" sprite="ui_game_symbol_sort" tooltip_key="lblSortContainer" pos="0, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
 					
 				<rect pos="0, 0" visible="{always}">
-					<button   depth="3" name="btnMoveAll"          sprite="ui_game_symbol_store_all_down"     tooltip_key="lblStashAll" pos="80, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
-					<button   depth="3" name="btnMoveFillAndSmart" sprite="ui_game_symbol_store_similar_down" tooltip_key="lblStashFillAndSmart" pos="40, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" /> <!--
-					<combobox depth="3" name="cbxLockedSlots" pos="100,-7" width="100" height="30" tooltip_key="xuiStashLockedSlots" type="ComboBoxInt" value_min="0" value_max="45" value_wrap="true" value_increment="1" visibility="always"/>
-					
-					<sprite depth="4" name="searchIcon" style="icon30px" pos="460,-22" sprite="ui_game_symbol_search" pivot="center"/>
-					<textfield depth="5" name="searchInput" pos="485,-7" width="140" height="30" virtual_keyboard_prompt="vkPromptSearchTerm" search_field="true"/>
-					-->
-					<combobox depth="3" name="cbxLockedSlots" pos="500,-7" width="100" height="30" tooltip_key="xuiStashLockedSlots" type="ComboBoxInt" value_min="0" value_max="45" value_wrap="true" value_increment="1" visibility="always"/>
-					
+					<button depth="3" name="btnMoveAll" sprite="ui_game_symbol_store_all_down" tooltip_key="lblStashAll" pos="80, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
+					<button depth="3" name="btnMoveFillAndSmart" sprite="ui_game_symbol_store_similar_down" tooltip_key="lblStashFillAndSmart" pos="40, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
 					<sprite depth="4" name="searchIcon" style="icon30px" pos="120,-22" sprite="ui_game_symbol_search" pivot="center"/>
 					<textfield depth="5" name="searchInput" pos="140,-7" width="140" height="30" virtual_keyboard_prompt="vkPromptSearchTerm" search_field="true"/>
 				</rect>
+				<combobox depth="3" name="cbxLockedSlots" pos="500,-7" width="100" height="30" tooltip_key="xuiStashLockedSlots" type="ComboBoxInt" value_min="0" value_max="45" value_wrap="true" value_increment="1" visibility="always"/>
 			</rect>
 
 				<!-- KEYS -->
@@ -65,6 +59,8 @@
 				<!-- SOULS -->
 				<label depth="2" pos="333,-10" width="50" height="28" font_size="24" text="{cvar($soulsAmount:0)}" justify="left" color="210,210,210,255" effect="Outline8" effect_color="22,22,22,255" effect_distance="2,2" globalopacity="false" tooltip="Souls" />
 				<rect depth="2" pos="0,-10" size="30,28" tooltip="Soul Currency"/>
+
+
 			<label depth="2" pos="670,-8" width="100" height="28" text="{currencyamount}" color="[mediumGrey]" justify="right" />
 			<sprite depth="4" name="costIcon" sprite="ui_game_symbol_coin" size="24,24" pos="775,-10" color="[white]" foregroundlayer="true" />
 		</panel>
@@ -79,7 +75,7 @@
 
 	<!-- Stop the error when looting player backpack -->
 	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">11</set>
-    <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">11</set>
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">11</set>
 
 	<!-- Remove the DF HUDLeftStatBars stuff -->
 	<remove xpath="/windows/window[@name='HUDLeftStatBars']/rect[@name='leftposition']"/>
