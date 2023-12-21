@@ -1,7 +1,7 @@
 <Vux>		
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">startingItem,sorceryFamiliarArcane0,potion_Health,potion_Spirit,potion_HolyWater,potion_Devour,sorceryAlchemyMortar,incantation_Recall,keystoneBlock,bedrollBlockVariantHelper</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">startingItem,sorceryFamiliarArcane0,potion_Health,potion_Spirit,potion_HolyWater,potion_Devour,sorceryAlchemyMortar,incantation_Recall,keystoneBlock,bedrollBlockVariantHelper</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">startingItem,sorceryFamiliarArcane0,potion_Health,potion_Spirit,potion_HolyWater,potion_Devour,sorceryAlchemyMortar,incantation_Recall,keystoneBlock,bedrollBlockVariantHelper</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">startingItem,sorceryFamiliarArcane0,potion_Health,potion_Spirit,potion_HolyWater,potion_Devour,sorceryAlchemyMortar,incantation_Recall,supporterKey,keystoneBlock,bedrollBlockVariantHelper</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">startingItem,sorceryFamiliarArcane0,potion_Health,potion_Spirit,potion_HolyWater,potion_Devour,sorceryAlchemyMortar,incantation_Recall,supporterKey,keystoneBlock,bedrollBlockVariantHelper</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">startingItem,sorceryFamiliarArcane0,potion_Health,potion_Spirit,potion_HolyWater,potion_Devour,sorceryAlchemyMortar,incantation_Recall,supporterKey,keystoneBlock,bedrollBlockVariantHelper</set>
 
 	<!-- ANIMALS -->
 	<append xpath="/entity_classes/entity_class[@name='animalTemplateHostileDFNew' or @name='animalTemplateTimidDFNew' or @name='Hornet' or @name='animalFarm']">
@@ -9,8 +9,8 @@
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffSorceryImmunity_Entities"/>
 		</effect_group>
 	</append>
-	<!-- Bosses, Crystals -->
-	<append xpath="/entity_classes/entity_class[@name='DFNightStalker' or @name='DFNightStalkerBoss' or @name='Succubus' or @name='Incubus' or @name='DemonBehemoth' or @name='RedCrystal' or @name='BlueCrystal' or @name='RedCrystal' or @name='PurpleCrystal' or @name='GreenCrystal']">
+	<!-- Bosses -->
+	<append xpath="/entity_classes/entity_class[@name='DFNightStalker' or @name='DFNightStalkerBoss' or @name='Succubus' or @name='Incubus' or @name='DemonBehemoth']">
 		<effect_group name="Sorcery">
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffSorceryImmunity_Entities"/>
 		</effect_group>

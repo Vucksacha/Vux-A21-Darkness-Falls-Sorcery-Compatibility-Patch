@@ -1,0 +1,5 @@
+<Vux>
+	<setattribute xpath="//trader_item_group[@name='SorceryTrader_Summons']/item[starts-with(@name, 'sorceryFamiliar')]" name="quality">1,80</setattribute>
+	<setattribute xpath="//trader_item_group[@name='SorceryTrader_Armor']/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]" name="quality">1,80</setattribute>
+	<setattribute xpath="//trader_item_group[@name='SorceryTrader_Weapons']/item[starts-with(@name, 'spellcast') or starts-with(@name, 'spellTurret') or starts-with(@name, 'staff') or starts-with(@name, 'wand') or starts-with(@name, 'claw') or starts-with(@name, 'dagger') or starts-with(@name, 'polearm') or starts-with(@name, 'scythe') or starts-with(@name, 'sword')]" name="quality">1,80</setattribute>
+</Vux>
