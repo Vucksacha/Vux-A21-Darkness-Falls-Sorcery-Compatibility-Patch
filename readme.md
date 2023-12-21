@@ -1,5 +1,25 @@
 # Alpha 21 Darkness Falls & Sorcery Compatibility patch
 
-Darkness Falls 5.0.1 and Sorcery 1.942
+<table>
+	<thead>
+		<tr>
+			<th>Darkness Falls version</th>
+			<th>Sorcery version</th>
+			<th>Compatibility patch version</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>5.0.1</td>
+			<td>1.942</td>
+			<td>1.1</td>
+		</tr>
+	</tbody>
+</table>
 
-Credit to Sorcerer NotARobot for the previous compatibility patches, quite a lot of what NotARobot developed is still very relevant and is incorporated in to the changes here.
+<h2>Credits</h2>
+<ul>
+	<li>Sorcerer NotARobot for the previous compatibility patches, quite a lot of what NotARobot developed is still very relevant and is incorporated in to the changes here.</li>
+	<li>Devrix for developing Sorcery</li>
+	<li>Khaine for developing Darkness Falls</li>
+</ul>
