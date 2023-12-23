@@ -27,7 +27,7 @@
 </ul>
 
 <p>The install folder should look like the image below:</p>
-<img src="https://imgur.com/a/bJ3v8fV">
+<img src="https://i.imgur.com/gtVKPxb.jpg">
 
 
 <h2>Credits</h2>
