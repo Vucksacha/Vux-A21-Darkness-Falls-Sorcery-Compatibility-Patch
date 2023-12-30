@@ -256,12 +256,16 @@
 	<set xpath="/items/item[starts-with(@name,'staff')]/effect_group/passive_effect[@name='DegradationMax']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'staff')]/effect_group/passive_effect[@name='EntityDamage']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'staff')]/effect_group/passive_effect[@name='BlockDamage']/@tier">1,80</set>
+
+	<append xpath="/items/item[starts-with(@name,'staff')]/property[@name='Tags']/@value">,noBlades,2HandBlunt</append>
 	
 	<!-- ALL: Secondary Weapons -->
 	<set xpath="/items/item[starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='DegradationPerUse']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='DegradationMax']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='EntityDamage']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='BlockDamage']/@tier">1,80</set>
+
+	<append xpath="/items/item[starts-with(@name,'polearm') or starts-with(@name,'scythe')]/property[@name='Tags']/@value">,perkDeepCuts,2HandBlade</append>
 
 	<!-- Mod amount for Weapons -->
 	<set xpath="/items/item[starts-with(@name,'staff') or starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>

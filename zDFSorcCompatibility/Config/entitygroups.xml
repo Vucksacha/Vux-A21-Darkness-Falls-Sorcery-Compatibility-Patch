@@ -4,38 +4,64 @@
 		<entity name="sorceryFallenFire" prob="0.05"/>
 		<entity name="sorceryFallenIce" prob="0.05"/>
 		<entity name="sorceryFallenLightning" prob="0.05"/>
+		<entity name="sorceryFallenUnholy" prob="0.025"/>
 		<entity name="sorceryFallenOmni" prob="0.01"/>
+		<entity name="sorcerySkeletonFire" prob="0.1"/>
+		<entity name="sorcerySkeletonIce" prob="0.1"/>
+		<entity name="sorcerySkeletonLightning" prob="0.1"/>
+		<entity name="sorcerySkeletonUnholy" prob="0.05"/>
 	</append>
 
 	<append xpath="/entitygroups/entitygroup[starts-with(@name, 'blood3HordeStageGS')]">
 		<entity name="sorceryFallenFire" prob="0.08"/>
 		<entity name="sorceryFallenIce" prob="0.08"/>
 		<entity name="sorceryFallenLightning" prob="0.08"/>
+		<entity name="sorceryFallenUnholy" prob="0.04"/>
 		<entity name="sorceryFallenOmni" prob="0.01"/>
+		<entity name="sorcerySkeletonFire" prob="0.15"/>
+		<entity name="sorcerySkeletonIce" prob="0.15"/>
+		<entity name="sorcerySkeletonLightning" prob="0.15"/>
+		<entity name="sorcerySkeletonUnholy" prob="0.075"/>
 	</append>
 	<!-- WANDERING -->
 	<append xpath="/entitygroups/entitygroup[@name='DemonHorde' or @name='ZombieFeralRadWandering']">
 		<entity name="sorceryFallenFire" prob="0.1"/>
 		<entity name="sorceryFallenIce" prob="0.1"/>
 		<entity name="sorceryFallenLightning" prob="0.1"/>
+		<entity name="sorceryFallenUnholy" prob="0.05"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='DemonPortal' or @name='ScfiPortal' or @name='ZombieDemonsBiome']">
 		<entity name="sorceryFallenFire" prob="0.08"/>
 		<entity name="sorceryFallenIce" prob="0.08"/>
 		<entity name="sorceryFallenLightning" prob="0.08"/>
+		<entity name="sorceryFallenUnholy" prob="0.04"/>
 		<entity name="sorceryFallenOmni" prob="0.01"/>
+		<entity name="sorcerySkeletonFire" prob="0.15"/>
+		<entity name="sorcerySkeletonIce" prob="0.15"/>
+		<entity name="sorcerySkeletonLightning" prob="0.15"/>
+		<entity name="sorcerySkeletonUnholy" prob="0.075"/>
 	</append>	
 	<!-- FERAL -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombieRadGroup']">
 		<entity name="sorceryFallenFire" prob="0.08"/>
 		<entity name="sorceryFallenIce" prob="0.08"/>
 		<entity name="sorceryFallenLightning" prob="0.08"/>
+		<entity name="sorceryFallenUnholy" prob="0.04"/>
+		<entity name="sorcerySkeletonFire" prob="0.15"/>
+		<entity name="sorcerySkeletonIce" prob="0.15"/>
+		<entity name="sorcerySkeletonLightning" prob="0.15"/>
+		<entity name="sorcerySkeletonUnholy" prob="0.075"/>
 	</append>
 	<!-- NIGHT -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
 		<entity name="sorceryFallenFire" prob="0.08"/>
 		<entity name="sorceryFallenIce" prob="0.08"/>
 		<entity name="sorceryFallenLightning" prob="0.08"/>
+		<entity name="sorceryFallenUnholy" prob="0.04"/>
+		<entity name="sorcerySkeletonFire" prob="0.15"/>
+		<entity name="sorcerySkeletonIce" prob="0.15"/>
+		<entity name="sorcerySkeletonLightning" prob="0.15"/>
+		<entity name="sorcerySkeletonUnholy" prob="0.075"/>
 	</append>
 
 	<!-- Not sure if this is OK? Maybe it doesn't belong in those groups.-->

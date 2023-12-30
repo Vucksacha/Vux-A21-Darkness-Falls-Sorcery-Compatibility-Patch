@@ -1,5 +1,4 @@
-<Vux>
-	
+<Vux>	
 	<!-- UI: Spellforges -->
 	<!-- NOTE: Workaround Khaines DF patch -->
 	<setattribute xpath="/windows/window[@name='windowToolsConjureFire' or @name='windowToolsConjureIce' or @name='windowToolsConjureLightning' or @name='windowFuelConjureFire' or @name='windowFuelConjureIce' or @name='windowFuelConjureLightning']/panel[@style='header.panel']" name="pos">0,100</setattribute>
@@ -91,4 +90,30 @@
 			<label depth="6" name="TxtTime" font_size="22" height="23" justify="center" pivot="center" text="{time}" color="220,220,220,230" effect="Outline8" effect_color="10,10,10,255" effect_distance="2,2" />
 		</sprite>
 	</append>
+
+	<!-- Fix the buff window alignment -->
+	<setattribute xpath="//window[@name='buffInfoPanel']" name="width">805</setattribute>
+
+	<setattribute xpath="//rect[@name='SorceryBuffInfoPanelUI']" name="pos">0,0</setattribute>
+	<setattribute xpath="//rect[@name='SorceryBuffInfoPanelUI']/panel[@name='header']" name="pos">0,77</setattribute>
+
+
+	<setattribute xpath="//rect[@name='contentBuffInfo']" name="height">346</setattribute>
+	<setattribute xpath="//rect[@name='contentBuffInfo']" name="pos">0,33</setattribute>
+
+	<setattribute xpath="//rect[@name='contentBuffInfo']/rect/sprite[1]" name="width">805</setattribute>
+	<setattribute xpath="//rect[@name='contentBuffInfo']/rect/sprite[1]" name="height">346</setattribute>
+
+	<setattribute xpath="//rect[@name='contentBuffInfo']/rect/rect[1]" name="width">652</setattribute>
+	<setattribute xpath="//rect[@name='contentBuffInfo']/rect/rect[1]" name="height">346</setattribute>
+
+	<setattribute xpath="//rect[@name='contentBuffInfo']/rect/rect[1]/sprite[1]" name="width">644</setattribute>
+
+	<setattribute xpath="//rect[@name='contentBuffInfo']/rect/rect[1]/sprite[2]" name="width">655</setattribute>
+	<setattribute xpath="//rect[@name='contentBuffInfo']/rect/rect[1]/sprite[2]" name="height">346</setattribute>
+
+	<setattribute xpath="//rect[@name='contentBuffInfo']/rect/rect[1]/sprite[2]" name="height">346</setattribute>
+
+	<setattribute xpath="//rect[@name='contentBuffInfo']/rect/rect[1]/rect[1]/label" name="width">645</setattribute>
+	<setattribute xpath="//rect[@name='contentBuffInfo']/rect/rect[1]/rect[1]/label" name="height">338</setattribute>
 </Vux>

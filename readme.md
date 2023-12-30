@@ -12,7 +12,7 @@
 		<tr>
 			<td>5.0.1</td>
 			<td>1.942</td>
-			<td>1.1</td>
+			<td>1.2</td>
 		</tr>
 	</tbody>
 </table>
