@@ -9,4 +9,6 @@
 			<item name="cobweb" count="1,2"/>
 		</lootcontainer>
 	</append>
+
+	<setattribute xpath="//lootcontainer[@name='playerBackpack']" name="size">12,12</setattribute>
 </Vux>

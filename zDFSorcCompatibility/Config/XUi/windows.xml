@@ -73,8 +73,8 @@
 	</set>
 
 	<!-- Stop the error when looting player backpack -->
-	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">11</set>
-	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">11</set>
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">12</set>
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">12</set>
 
 	<!-- Remove the DF HUDLeftStatBars stuff -->
 	<remove xpath="/windows/window[@name='HUDLeftStatBars']/rect[@name='leftposition']"/>

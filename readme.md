@@ -6,13 +6,15 @@
 			<th>Darkness Falls version</th>
 			<th>Sorcery version</th>
 			<th>Compatibility patch version</th>
+			<th>7D2D version</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>5.0.1</td>
 			<td>1.942</td>
-			<td>1.2</td>
+			<td>1.3</td>
+			<td>A21.2 (b30)</td>
 		</tr>
 	</tbody>
 </table>
