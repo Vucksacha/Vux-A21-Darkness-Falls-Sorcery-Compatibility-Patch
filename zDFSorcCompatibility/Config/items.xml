@@ -273,14 +273,14 @@
 	<set xpath="/items/item[starts-with(@name,'staff') or starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
 	<set xpath="/items/item[starts-with(@name,'staff') or starts-with(@name,'wand') or starts-with(@name,'sword') or starts-with(@name,'polearm') or starts-with(@name,'dagger') or starts-with(@name,'claw') or starts-with(@name,'scythe')]/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 	
-<!-- ALL: Spell Turrets -->
+	<!-- ALL: Spell Turrets -->
 	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='MagazineSize']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='DegradationPerUse']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='DegradationMax']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
 	<set xpath="/items/item[starts-with(@name,'spellTurret')]/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
 	
-<!-- SPELL ARROWS + BOLTS -->
+	<!-- SPELL ARROWS + BOLTS -->
 	<append xpath="/items/item[@name='DFgunTazasBow']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellArrowFire,spellArrowIce,spellArrowLightning,spellArrowOmni</append>
 	<append xpath="/items/item[@name='DFgunTitaniumCrossbow']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBoltFire,spellBoltIce,spellBoltLightning,spellBoltOmni</append>
 	<set xpath="/items/item[@name='gunBowFailnot']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoArrowIron,ammoArrowSteelAP,ammoArrowFlaming,ammoArrowExploding,DFammoArrowTitanium,ammoArrowExplodingPulse,spellArrowFire,spellArrowIce,spellArrowLightning,spellArrowOmni
@@ -290,7 +290,15 @@
 	<append xpath="//item[@name='DFgunPorkinsShotgun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBulletShell_Fire,spellBulletShell_Ice,spellBulletShell_Lightning,spellBulletShell_Omni</append>
 	<append xpath="//item[@name='DFgunBlackSky' or @name='DFgunWinchesterRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet44_Fire,spellBullet44_Ice,spellBullet44_Lightning,spellBullet44_Omni</append>
 	<append xpath="//item[@name='DFgunM4A1']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet762_Fire,spellBullet762_Ice,spellBullet762_Lightning,spellBullet762_Omni</append>
-	<append xpath="//item[@name='DFgunP225']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet9mm_Fire,spellBullet9mm_Ice,spellBullet9mm_Lightning,spellBullet9mm_Omni</append>	
+	<append xpath="//item[@name='DFgunP225']/property[@class='Action0']/property[@name='Magazine_items']/@value">,spellBullet9mm_Fire,spellBullet9mm_Ice,spellBullet9mm_Lightning,spellBullet9mm_Omni</append>
+
+
+	<append xpath="//item[starts-with(@name,'spellBullet9mm') or starts-with(@name,'spellBullet44') or starts-with(@name,'spellBullet762')]/effect_group[@name='Base Effects']">
+	<!-- <append xpath="//item[@name='spellBullet762_Fire')]/effect_group[@name='Base Effects']">-->
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="brassAmmo" operation="set" value="1"/>
+		<triggered_effect trigger="onReloadStop" action="ModifyCVar" cvar="brassAmmo" operation="set" value="1"/>
+	</append>
+
 	
 <!-- FAMILIARS -->
 	<set xpath="/items/item[@name='sorceryFamiliarArcane' or @name='sorceryFamiliarFire' or @name='sorceryFamiliarIce' or @name='sorceryFamiliarLightning' or @name='incantation_SummonOmniPack' or @name='book_SummonFamiliars']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>

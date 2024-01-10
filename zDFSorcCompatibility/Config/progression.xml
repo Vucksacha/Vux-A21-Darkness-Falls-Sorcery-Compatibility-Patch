@@ -37,7 +37,7 @@
 	<set xpath="/progression/perks/perk[@name='perkSorceryLightningFamiliar']/effect_group[@name='LIGHTNING FAMILIAR']/passive_effect[@name='CraftingTier']/@value">1,80</set>
 	
 	
-	<append xpath="/progression/perks/perk[@name='perkTheCompletionist']/effect_group[@name='Completionist Bonus']/passive_effect[@name='CraftingTier']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
+	<append xpath="/progression/perks/perk[@name='perkTheCompletionist']/effect_group[@name='Completionist Bonus']/passive_effect[@name='CraftingTier' and @value='20']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
 	<append xpath="progression/perks/perk[@name='perkCraftFutureTech']/effect_group[1]/passive_effect[@name='RecipeTagUnlocked' and @level='5']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>	
 	<append xpath="progression/perks/perk[@name='perkCraftFutureTech']/effect_group[1]/passive_effect[@name='CraftingTier' and @level='1']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
 	<append xpath="progression/perks/perk[@name='perkCraftFutureTech']/effect_group[1]/passive_effect[@name='CraftingTier' and @level='2']/@tags">,sorc_DFarmorTechBoots,sorc_DFarmorTechVest,sorc_DFarmorTechGloves,sorc_DFarmorTechHelmet,sorc_DFarmorTechLegs</append>
