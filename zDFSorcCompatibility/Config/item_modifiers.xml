@@ -1,7 +1,8 @@
-<SorceryCompatibilityDF>
-		
+<SorceryCompatibilityDF>		
 	<!-- Silence Rune -->
 	<append xpath="/item_modifiers/item_modifier[@name='rune_Silence']/effect_group[@name='RUNE']/requirement[@name='EntityTagCompare']/@tags">,demon</append>
+	<remove xpath="/item_modifiers/item_modifier[@name='rune_Silence']/effect_group[@name='RUNE']/requirement[@name='!HoldingItemHasTags']"/>
+
 	<append xpath="/item_modifiers/item_modifier[@name='modGunMeleeRadRemover' or @name='modGunMeleeBlessedMetal']/@installable_tags">,spellcast,spellTurret</append>
 	
 	<!-- Rad Remover -->
