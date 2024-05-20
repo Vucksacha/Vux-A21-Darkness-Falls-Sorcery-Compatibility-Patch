@@ -11,10 +11,10 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>5.0.1</td>
+			<td>5.1.0</td>
 			<td>1.942</td>
 			<td>1.4.1</td>
-			<td>A21.2 (b30)</td>
+			<td>A21.2 (b37)</td>			
 		</tr>
 	</tbody>
 </table>
