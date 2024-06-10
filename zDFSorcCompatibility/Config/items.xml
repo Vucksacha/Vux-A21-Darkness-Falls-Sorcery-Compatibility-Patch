@@ -299,6 +299,10 @@
 		<triggered_effect trigger="onReloadStop" action="ModifyCVar" cvar="brassAmmo" operation="set" value="1"/>
 	</append>
 
+	<!-- gunMGT2TacticalAR -->
+	<set xpath="//item[@name='gunMGT2TacticalAR']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammo762mmBulletFMJSteel,ammo762mmBulletSteelHP,ammo762mmBulletSteelAP,spellBullet762_Fire,spellBullet762_Ice,spellBullet762_Lightning,spellBullet762_Omni
+	</set>
+
 	
 <!-- FAMILIARS -->
 	<set xpath="/items/item[@name='sorceryFamiliarArcane' or @name='sorceryFamiliarFire' or @name='sorceryFamiliarIce' or @name='sorceryFamiliarLightning' or @name='incantation_SummonOmniPack' or @name='book_SummonFamiliars']/effect_group[@name='TIER']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
