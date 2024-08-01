@@ -425,57 +425,57 @@
 			
 			<effect_group name="TIER 1">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="1"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="0.05" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".025" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".025" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".025" />				
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".011" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="10" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="0.1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".05" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".022" />				
 			</effect_group>
 			<effect_group name="TIER 2">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="30"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="150" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".33" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="0.15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".033" />
 			</effect_group>
 			<effect_group name="TIER 3">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="40"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="200" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".429" />	
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="20" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value=".2" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".044" />	
 			</effect_group>
 			<effect_group name="TIER 4">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="50"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="250" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="2.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".55" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value=".25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".055" />				
 			</effect_group>
 			<effect_group name="TIER 5">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="60"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="300" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="3" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".66" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="30" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value=".3" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".066" />				
 			</effect_group>
 			<effect_group name="TIER 6">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="80"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="390" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="3.9" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".858" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritMax" operation="set" value="35" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_spiritRegen" operation="set" value="0.35" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceFireHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceIceHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_essenceLightningHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$head_sorceryDamage" operation="set" value=".077" />				
 			</effect_group>
 			<effect_group name="DISPLAY">
 				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".head_sorceryDamage" operation="set" value="@$head_sorceryDamage" />
@@ -537,57 +537,57 @@
 			
 			<effect_group name="TIER 1">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="1"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="0.05" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".025" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".025" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".025" />				
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".011" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="10" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="0.1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".05" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".022" />				
 			</effect_group>
 			<effect_group name="TIER 2">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="30"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="150" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".33" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="0.20" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".033" />
 			</effect_group>
 			<effect_group name="TIER 3">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="40"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="200" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".429" />	
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="20" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value=".2" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".044" />	
 			</effect_group>
 			<effect_group name="TIER 4">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="50"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="250" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="2.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".55" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value=".25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".055" />				
 			</effect_group>
 			<effect_group name="TIER 5">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="60"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="300" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="3" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".66" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="30" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value=".3" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".066" />				
 			</effect_group>
 			<effect_group name="TIER 6">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="80"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="390" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="3.9" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".858" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritMax" operation="set" value="35" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_spiritRegen" operation="set" value="0.35" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceFireHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceIceHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_essenceLightningHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$chest_sorceryDamage" operation="set" value=".077" />				
 			</effect_group>
 			<effect_group name="DISPLAY">
 				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".chest_sorceryDamage" operation="set" value="@$chest_sorceryDamage" />
@@ -649,57 +649,57 @@
 			
 			<effect_group name="TIER 1">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="1"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="0.05" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".025" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".025" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".025" />				
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".011" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="10" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="0.1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".05" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".022" />				
 			</effect_group>
 			<effect_group name="TIER 2">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="30"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="150" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".33" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="0.15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".033" />
 			</effect_group>
 			<effect_group name="TIER 3">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="40"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="200" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".429" />	
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="20" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value=".2" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".044" />	
 			</effect_group>
 			<effect_group name="TIER 4">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="50"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="250" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="2.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".55" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value=".25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".055" />				
 			</effect_group>
 			<effect_group name="TIER 5">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="60"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="300" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="3" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".66" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="30" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value=".3" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".066" />				
 			</effect_group>
 			<effect_group name="TIER 6">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="80"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="390" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="3.9" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".858" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritMax" operation="set" value="35" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_spiritRegen" operation="set" value="0.35" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceFireHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceIceHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_essenceLightningHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$gloves_sorceryDamage" operation="set" value=".077" />				
 			</effect_group>
 			<effect_group name="DISPLAY">
 				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".gloves_sorceryDamage" operation="set" value="@$gloves_sorceryDamage" />
@@ -762,57 +762,57 @@
 			
 			<effect_group name="TIER 1">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="1"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="0.05" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".025" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".025" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".025" />				
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".011" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="10" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="0.1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".05" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".022" />				
 			</effect_group>
 			<effect_group name="TIER 2">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="30"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="150" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".33" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="0.15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".033" />
 			</effect_group>
 			<effect_group name="TIER 3">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="40"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="200" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".429" />	
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="20" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value=".2" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".044" />	
 			</effect_group>
 			<effect_group name="TIER 4">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="50"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="250" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="2.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".55" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value=".25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".055" />				
 			</effect_group>
 			<effect_group name="TIER 5">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="60"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="300" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="3" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".66" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="30" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value=".3" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".066" />				
 			</effect_group>
 			<effect_group name="TIER 6">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="80"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="390" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="3.9" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".858" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritMax" operation="set" value="35" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_spiritRegen" operation="set" value="0.35" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceFireHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceIceHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_essenceLightningHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$leg_sorceryDamage" operation="set" value=".077" />				
 			</effect_group>
 			<effect_group name="DISPLAY">
 				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".leg_sorceryDamage" operation="set" value="@$leg_sorceryDamage" />
@@ -875,57 +875,57 @@
 			
 			<effect_group name="TIER 1">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="1"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="0.05" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".025" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".025" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".025" />				
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".011" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="10" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="0.1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".05" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".05" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".022" />				
 			</effect_group>
 			<effect_group name="TIER 2">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="30"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="150" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".75" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".33" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="0.15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".075" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".033" />
 			</effect_group>
 			<effect_group name="TIER 3">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="40"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="200" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".975" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".429" />	
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="20" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value=".2" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".1" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".044" />	
 			</effect_group>
 			<effect_group name="TIER 4">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="50"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="250" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="2.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value="1.25" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".55" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value=".25" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".125" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".055" />				
 			</effect_group>
 			<effect_group name="TIER 5">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="60"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="300" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="3" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value="1.5" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".66" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="30" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value=".3" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".15" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".066" />				
 			</effect_group>
 			<effect_group name="TIER 6">
 					<requirement name="RequirementItemTier" tier="sorceryArmor_Hood" operation="GTE" value="80"/>
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="390" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="3.9" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value="1.95" />
-				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".858" />				
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritMax" operation="set" value="35" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_spiritRegen" operation="set" value="0.35" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceFireHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceIceHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_essenceLightningHarvest" operation="set" value=".175" />
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$boots_sorceryDamage" operation="set" value=".077" />				
 			</effect_group>
 			<effect_group name="DISPLAY">
 				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar=".boots_sorceryDamage" operation="set" value="@$boots_sorceryDamage" />
