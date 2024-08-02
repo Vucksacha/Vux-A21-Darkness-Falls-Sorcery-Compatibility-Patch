@@ -8,8 +8,29 @@
 	<set xpath="/items/item[starts-with(@name,'spellcast')]/effect_group[@name='SPELLCAST: TIERED']/passive_effect[@name='DegradationMax']/@tier">1,80</set>
 	<set xpath="/items/item[starts-with(@name,'spellcast')]/effect_group[@name='SPELLCAST: TIERED']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
 	<set xpath="/items/item[starts-with(@name,'spellcast')]/effect_group[@name='SPELLCAST: TIERED']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
-	
+
 	<!-- ALL: Sorcerer Armor -->
+	<!-- Remove armorRigging tag - hopefully Devrix removes this tag from the base Sorcery items since this is an ugly patch and there doesn't seem to be any purpose for it outside of DF? -->
+	<set xpath="//item[@name='sorceryArmor_Hood']/property[@name='Tags']/@value">canHaveCosmetic,head,armor,armorHead,sorceryArmorHead,sorceryArmor,sorceryArmorSetArcane</set>
+	<set xpath="//item[@name='sorceryArmor_Gloves']/property[@name='Tags']/@value">upperbody,hands,armor,armorHands,sorceryArmor,sorceryArmorSetArcane</set>
+	<set xpath="//item[@name='sorceryArmor_Leg']/property[@name='Tags']/@value">lowerbody,legs,armor,armorLegs,sorceryArmor,sorceryArmorSetArcane</set>
+	<set xpath="//item[@name='sorceryArmor_Boots']/property[@name='Tags']/@value">lowerbody,feet,armor,armorFeet,sorceryArmor,sorceryArmorSetArcane</set>
+	
+	<set xpath="//item[@name='sorceryArmorFire_Hood']/property[@name='Tags']/@value">head,armor,armorHead,sorceryArmorHead,sorceryArmor,sorceryArmorSetFire</set>
+	<set xpath="//item[@name='sorceryArmorFire_Gloves']/property[@name='Tags']/@value">upperbody,hands,armor,armorHands,sorceryArmor,sorceryArmorSetFire</set>
+	<set xpath="//item[@name='sorceryArmorFire_Leg']/property[@name='Tags']/@value">lowerbody,legs,armor,armorLegs,sorceryArmor,sorceryArmorSetFire</set>
+	<set xpath="//item[@name='sorceryArmorFire_Boots']/property[@name='Tags']/@value">lowerbody,feet,armor,armorFeet,sorceryArmor,sorceryArmorSetFire</set>
+	
+	<set xpath="//item[@name='sorceryArmorIce_Hood']/property[@name='Tags']/@value">head,armor,armorHead,sorceryArmorHead,sorceryArmor,sorceryArmorSetIce</set>
+	<set xpath="//item[@name='sorceryArmorIce_Gloves']/property[@name='Tags']/@value">upperbody,hands,armor,armorHands,sorceryArmor,sorceryArmorSetIce</set>
+	<set xpath="//item[@name='sorceryArmorIce_Leg']/property[@name='Tags']/@value">lowerbody,legs,armor,armorLegs,sorceryArmor,sorceryArmorSetIce</set>
+	<set xpath="//item[@name='sorceryArmorIce_Boots']/property[@name='Tags']/@value">lowerbody,feet,armor,armorFeet,sorceryArmor,sorceryArmorSetIce</set>
+	
+	<set xpath="//item[@name='sorceryArmorLightning_Hood']/property[@name='Tags']/@value">head,armor,armorHead,sorceryArmorHead,sorceryArmor,sorceryArmorSetLightning</set>
+	<set xpath="//item[@name='sorceryArmorLightning_Gloves']/property[@name='Tags']/@value">upperbody,hands,armor,armorHands,sorceryArmor,sorceryArmorSetLightning</set>
+	<set xpath="//item[@name='sorceryArmorLightning_Leg']/property[@name='Tags']/@value">lowerbody,legs,armor,armorLegs,sorceryArmor,sorceryArmorSetLightning</set>
+	<set xpath="//item[@name='sorceryArmorLightning_Boots']/property[@name='Tags']/@value">lowerbody,feet,armor,armorFeet,sorceryArmor,sorceryArmorSetLightning</set>
+
 	<append xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/property[@name='Tags']/@value">,unique</append>
 	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='ModSlots']/@tier">1,11,21,31,41,51,61,71,80</set>
 	<set xpath="/items/item[starts-with(@name, 'sorceryArmor') or starts-with(@name, 'sorceryAccessory')]/effect_group[@name='TIER ALL']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6,7,8,8</set>
